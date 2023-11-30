@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-30T21:42:05 IST" name="SpiceJet" finished-at="2023-11-30T21:46:57 IST" duration-ms="291668">
+    <groups>
+    </groups>
+    <test started-at="2023-11-30T21:42:05 IST" name="Valid positive Test cases " finished-at="2023-11-30T21:44:33 IST" duration-ms="148005">
+      <class name="com.spicejet.test.SignUpTest_Positive">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.test.SignUpTest_Positive@48bb62]" started-at="2023-11-30T21:42:05 IST" name="setUp" finished-at="2023-11-30T21:42:05 IST" duration-ms="32" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="signUpWithValidCredentials()[pri:1, instance:com.spicejet.test.SignUpTest_Positive@48bb62]" started-at="2023-11-30T21:42:05 IST" name="signUpWithValidCredentials" finished-at="2023-11-30T21:44:32 IST" duration-ms="147115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpWithValidCredentials -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.SignUpTest_Positive@48bb62]" started-at="2023-11-30T21:44:32 IST" name="closeBrowser" finished-at="2023-11-30T21:44:33 IST" duration-ms="776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.spicejet.test.SignUpTest_Positive -->
+    </test> <!-- Valid positive Test cases  -->
+    <test started-at="2023-11-30T21:44:33 IST" name="InValid Negative Test cases" finished-at="2023-11-30T21:46:57 IST" duration-ms="143555">
+      <class name="com.spicejet.test.SignUpTest_Negative">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.test.SignUpTest_Negative@548a24a]" started-at="2023-11-30T21:44:33 IST" name="setUp" finished-at="2023-11-30T21:44:33 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="signUpWithInValidCredentials()[pri:0, instance:com.spicejet.test.SignUpTest_Negative@548a24a]" started-at="2023-11-30T21:44:33 IST" name="signUpWithInValidCredentials" finished-at="2023-11-30T21:46:56 IST" duration-ms="142785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpWithInValidCredentials -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.SignUpTest_Negative@548a24a]" started-at="2023-11-30T21:46:56 IST" name="closeBrowser" finished-at="2023-11-30T21:46:57 IST" duration-ms="761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.spicejet.test.SignUpTest_Negative -->
+    </test> <!-- InValid Negative Test cases -->
+  </suite> <!-- SpiceJet -->
+</testng-results>
