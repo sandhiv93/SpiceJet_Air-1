@@ -761,6 +761,21 @@ public class SeWrappers {
 		        e.printStackTrace();
 		    }
 		}
+		
+		//51. Method for Thread.sleep
+		// 5. Method to click on the webelement in the webpage
+		public void clicksleepElement(WebElement element) {
+		    try {
+		        element.click();
+		        Reports.reportStep("PASS", "WebElement " + element + " Clicked Successfully");
+		        Thread.sleep(5000); // Introduce a 5-second delay after clicking the element
+		    } catch (Exception e) {
+		        Reports.reportStep("FAIL", "WebElement " + element + " Unsuccessful");
+		        System.out.println("Problem arises because of unable to click the webelement");
+		        e.printStackTrace();
+		    }
+		}
+
 
 }
 

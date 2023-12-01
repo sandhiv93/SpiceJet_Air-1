@@ -2,7 +2,9 @@ package com.spicejet.utils;
 
 import org.openqa.selenium.support.PageFactory;
 
+import com.spicejet.pages.OW_Page;
 import com.spicejet.pages.Login_Page;
+import com.spicejet.pages.OW_Page;
 import com.spicejet.pages.SignUp_Page;
 
 public class SJWrappers extends SeWrappers{
@@ -53,16 +55,25 @@ public class SJWrappers extends SeWrappers{
 
 	//////////////////////////////////////////////////////////
 
+	//OneWay trip
+	public void oneWaywrapper(String place1, String place2, int value, String fname, String lname,
+			String number, String email, String city) {
+		try{
+			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
+			OW_Page oneTrip= PageFactory.initElements(driver, OW_Page.class);
+			oneTrip.enterFromPlace(place1);
+			oneTrip.enterToPlace(place2);
+			oneTrip.clicktitle(value);
+			oneTrip.enterFname(fname);
+			oneTrip.enterLname(lname);
+			oneTrip.entercontactNumber(number);
+			oneTrip.enteremailid(email);
+			oneTrip.entertownName(city);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 
-
-
-
-
-
-
-
-
-
-
-
+	}
 }

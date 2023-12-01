@@ -34,8 +34,9 @@ public class Login_Page extends SeWrappers {
 	public WebElement emailid;
 
 	public void enteremailid(String myemail) {
-		waitforelementExplicitwait(emailid, 10);
 		clickElement(emailid);
+		waitforelementExplicitwait(emailid, 20);
+		clicksleepElement(mypasswd);
 		typeText(emailid, myemail);
 	}
 
@@ -46,9 +47,10 @@ public class Login_Page extends SeWrappers {
 	public WebElement mypasswd;
 
 	public void enterpassword(String mypwd) {
-		waitforelementExplicitwait(mypasswd, 20);
 		clickElement(mypasswd);
-		typeText(emailid, mypwd);
+		waitforelementExplicitwait(emailid, 20);
+		clicksleepElement(mypasswd);
+		typeText(mypasswd, mypwd);
 	}
 
 	//////////////////////////////////////////////////////////

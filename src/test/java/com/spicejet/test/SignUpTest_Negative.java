@@ -17,7 +17,7 @@ public class SignUpTest_Negative extends SeWrappers{
 	@Test
 	public void signUpWithInValidCredentials(){
 		try{
-			Reports.setTCDesc("SignUp of SpiceJet functionality with Invalid credentials");
+			repo.setTCDesc("SignUp of SpiceJet functionality with Invalid credentials");
 			launchBrowser();
 			sj.signupwrapper(1, "Anandh", "Srinivasan", "29", "1996", "February", "9876543210", "abc123@gmail.com", "Spicejet", "Spicejet");
 			se.screenshot("NegativeTC_InValidName");
@@ -27,18 +27,18 @@ public class SignUpTest_Negative extends SeWrappers{
 		catch(Exception ex){
 			ex.printStackTrace();
 			System.out.println("Fail to SignUp");
-			Reports.reportStep("FAIL", "Problem while SignUp");
+			repo.reportStep("FAIL", "Problem while SignUp");
 		}
 	}
 	@AfterMethod
 	public void closeBrowser(){
 		try{
 			driver.quit();
-			Reports.reportStep("PASS", "Browser closed successfully");
+			repo.reportStep("PASS", "Browser closed successfully");
 		}
 		catch(Exception ex){
 			System.out.println("Problem in closing the browser");
-			Reports.reportStep("FAIL", "Problem in closing the browser");
+			repo.reportStep("FAIL", "Problem in closing the browser");
 			ex.printStackTrace();
 		}
 	}

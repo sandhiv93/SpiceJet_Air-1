@@ -59,7 +59,7 @@ public class LoginTest_P_DataPVDR extends SeWrappers{
 	//@Test(dataProvider="fetchData",priority=2)
 	
 	
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void loginWithValidCredentials() {
 		try {
 			Reports.setTCDesc("SpiceJet LoginPage functionality with valid credentials");
@@ -75,16 +75,16 @@ public class LoginTest_P_DataPVDR extends SeWrappers{
 		}
 	}
 	
-	@AfterMethod
-	public void closeBrowser(){
-		try{
-			driver.close();
-			Reports.reportStep("PASS", "Browser closed successfully");
-		}
-		catch(Exception ex){
-			System.out.println("Problem in closing the browser");
-			Reports.reportStep("FAIL", "Problem in closing the browser");
-			ex.printStackTrace();
-		}
-	}
+//	@AfterMethod
+//	public void closeBrowser(){
+//		try{
+//			driver.close();
+//			Reports.reportStep("PASS", "Browser closed successfully");
+//		}
+//		catch(Exception ex){
+//			System.out.println("Problem in closing the browser");
+//			Reports.reportStep("FAIL", "Problem in closing the browser");
+//			ex.printStackTrace();
+//		}
+//	}
 }
