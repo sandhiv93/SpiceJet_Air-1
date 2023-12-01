@@ -9,38 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Positive Test Cases</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">1,981</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Negative Test cases</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">639,792</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">4</th><th class="num attn">2</th><th class="num">0</th><th class="num">0</th><th class="num">641,773</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Positive Test Cases</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">57,450</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Negative Test cases</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">43,576</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">101,026</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Positive Test Cases &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.spicejet.test.LoginTest_P_DataPVDR</td><td><a href="#m0">setUp</a></td><td rowspan="1">1701415776496</td><td rowspan="1">-1701415776496</td></tr><tr class="failedodd"><td rowspan="1">com.spicejet.test.SignUpTest_Positive</td><td><a href="#m1">setUp</a></td><td rowspan="1">1701415776410</td><td rowspan="1">-1701415776410</td></tr><tr><th colspan="4">Positive Test Cases &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.spicejet.test.LoginTest_P_DataPVDR</td><td><a href="#m2">closeBrowser</a></td><td rowspan="1">1701415778314</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">com.spicejet.test.SignUpTest_Positive</td><td><a href="#m3">closeBrowser</a></td><td rowspan="1">1701415776487</td><td rowspan="1">0</td></tr><tr><th colspan="4">Positive Test Cases &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.spicejet.test.LoginTest_P_DataPVDR</td><td><a href="#m4">loginWithValidCredentials</a></td><td rowspan="1">1701415778296</td><td rowspan="1">1</td></tr><tr class="skippedodd"><td rowspan="1">com.spicejet.test.SignUpTest_Positive</td><td><a href="#m5">signUpWithValidCredentials</a></td><td rowspan="1">1701415776473</td><td rowspan="1">1</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Negative Test cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.spicejet.test.LoginTest_N_DataPVDR</td><td><a href="#m6">loginWithInValidCredentials</a></td><td rowspan="3">1701416091809</td><td rowspan="3">163657</td></tr><tr class="passedeven"><td><a href="#m7">loginWithInValidCredentials</a></td></tr><tr class="passedeven"><td><a href="#m8">loginWithInValidCredentials</a></td></tr><tr class="passedodd"><td rowspan="1">com.spicejet.test.SignUpTest_Negative</td><td><a href="#m9">signUpWithInValidCredentials</a></td><td rowspan="1">1701415778418</td><td rowspan="1">149660</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Positive Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.spicejet.test.LoginTest_P_DataPVDR</td><td><a href="#m0">loginWithValidCredentials</a></td><td rowspan="1">1701426442687</td><td rowspan="1">56598</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Negative Test cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.spicejet.test.LoginTest_N_DataPVDR</td><td><a href="#m1">loginWithInValidCredentials</a></td><td rowspan="1">1701426500460</td><td rowspan="1">43278</td></tr></tbody>
 </table>
-<h2>Positive Test Cases</h2><h3 id="m0">com.spicejet.test.LoginTest_P_DataPVDR#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in D:\EclipseIDE\pj1_framework\testng.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.spicejet.test.SignUpTest_Positive#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in D:\EclipseIDE\pj1_framework\testng.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.spicejet.test.LoginTest_P_DataPVDR#closeBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.spicejet.test.SignUpTest_Positive#closeBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.spicejet.test.LoginTest_P_DataPVDR#loginWithValidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>devanandh2902@gmail.com</td><td>Batman12@#</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in D:\EclipseIDE\pj1_framework\testng.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.spicejet.test.SignUpTest_Positive#signUpWithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in D:\EclipseIDE\pj1_framework\testng.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Negative Test cases</h2><h3 id="m6">com.spicejet.test.LoginTest_N_DataPVDR#loginWithInValidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>!&quot;£$%^@gmail.com</td><td>123456</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.spicejet.test.LoginTest_N_DataPVDR#loginWithInValidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>abc123@gmail.com</td><td>123456</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.spicejet.test.LoginTest_N_DataPVDR#loginWithInValidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>01234&quot;yahoo.com</td><td>qwerty</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">com.spicejet.test.SignUpTest_Negative#signUpWithInValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Positive Test Cases</h2><h3 id="m0">com.spicejet.test.LoginTest_P_DataPVDR#loginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Negative Test cases</h2><h3 id="m1">com.spicejet.test.LoginTest_N_DataPVDR#loginWithInValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -746,6 +746,22 @@ public class SeWrappers {
 			} 
 		}
 		
+		//50. Method for click radiobutton
+		public void clickRadioButton(WebElement radioButton) {
+		    try {
+		        if (!radioButton.isSelected()) {
+		            radioButton.click();
+		            Reports.reportStep("PASS", "Clicking radio button is successful");
+		        } else {
+		            Reports.reportStep("INFO", "Radio button is already selected");
+		        }
+		    } catch (Exception e) {
+		        System.out.println("Problem arose because of unable to click the radio button");
+		        Reports.reportStep("FAIL", "Problem in clicking radio button");
+		        e.printStackTrace();
+		    }
+		}
+
 }
 
 

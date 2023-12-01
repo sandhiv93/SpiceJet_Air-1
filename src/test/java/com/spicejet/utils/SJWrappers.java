@@ -38,7 +38,6 @@ public class SJWrappers extends SeWrappers{
 	//Login Page Methods
 	public void loginwrapper(String myemaild, String mypassowrd) {
 		try {
-
 			Login_Page loginPage = PageFactory.initElements(driver, Login_Page.class);
 			loginPage.clickloginMainpage();
 			loginPage.clickEmailRadioButton();

@@ -3,13 +3,6 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Positive Test Cases(failed)">
     <classes>
-      <class name="com.spicejet.test.SignUpTest_Positive">
-        <methods>
-          <include name="signUpWithValidCredentials"/>
-          <include name="closeBrowser"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.spicejet.test.SignUpTest_Positive -->
       <class name="com.spicejet.test.LoginTest_P_DataPVDR">
         <methods>
           <include name="closeBrowser"/>

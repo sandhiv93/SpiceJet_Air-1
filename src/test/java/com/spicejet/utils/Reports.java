@@ -17,10 +17,8 @@ public class Reports
 	
 	
 	@BeforeSuite(alwaysRun=true)
-	public static void startReport()
-	{
-		try
-		{	
+	public static void startReport(){
+		try{	
 			sparkReporter= new ExtentSparkReporter(System.getProperty("user.dir")+"/SpiceJetWebAutomationReport.html");
 			sparkReporter.config().setReportName("SpiceJet Web Automation");
 			sparkReporter.config().setDocumentTitle("Web Automation Report");
@@ -30,65 +28,47 @@ public class Reports
 			extentReports.attachReporter(sparkReporter);
 			
 		}
-		catch(Exception ex)
-		{
+		catch(Exception ex){
 			ex.printStackTrace();
 		}
 	}
 	
-	public static void setTCDesc(String testcaseName)
-	{
-		try
-		{
+	public static void setTCDesc(String testcaseName){
+		try{
 			extentTest=extentReports.createTest(testcaseName);
 			
 		}
-		catch(Exception ex)
-		{
+		catch(Exception ex){
 			ex.printStackTrace();
 		}
 	}
 	
-	public static void reportStep(String status,String desc)
-	{
-		try
-		{
+	public static void reportStep(String status,String desc){
+		try{
 			
-			if(status.equalsIgnoreCase("PASS"))
-			{
+			if(status.equalsIgnoreCase("PASS")){
 				extentTest.log(Status.PASS, desc);
 			}
-			else if(status.equalsIgnoreCase("FAIL"))
-			{
+			else if(status.equalsIgnoreCase("FAIL")){
 				extentTest.log(Status.FAIL, desc);
 			}
-			else if (status.equalsIgnoreCase("SKIP"))
-			{
+			else if (status.equalsIgnoreCase("SKIP")){
 				extentTest.log(Status.SKIP, desc);
 			}
-			
 		}
-		catch(Exception ex)
-		{
+		catch(Exception ex){
 			ex.printStackTrace();
 		}
 	}
 	
 	@AfterSuite(alwaysRun=true)
-	public void endReport()
-	{
-		try
-		{
+	public void endReport(){
+		try{
 			extentReports.flush();
 		}
-		catch(Exception ex)
-		{
+		catch(Exception ex){
 			ex.printStackTrace();
 		}
 	}
-
-
-
-
-
+	
 }
