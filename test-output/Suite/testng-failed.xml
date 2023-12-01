@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Positive Test Cases(failed)">
+    <classes>
+      <class name="com.spicejet.test.SignUpTest_Positive">
+        <methods>
+          <include name="signUpWithValidCredentials"/>
+          <include name="closeBrowser"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.spicejet.test.SignUpTest_Positive -->
+      <class name="com.spicejet.test.LoginTest_P_DataPVDR">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="loginWithValidCredentials"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.spicejet.test.LoginTest_P_DataPVDR -->
+    </classes>
+  </test> <!-- Positive Test Cases(failed) -->
+</suite> <!-- Failed suite [Suite] -->

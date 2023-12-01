@@ -1,36 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="4" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-30T21:42:05 IST" name="SpiceJet" finished-at="2023-11-30T21:46:57 IST" duration-ms="291668">
+  <suite started-at="2023-12-01T12:59:36 IST" name="Suite" finished-at="2023-12-01T13:10:18 IST" duration-ms="641856">
     <groups>
     </groups>
-    <test started-at="2023-11-30T21:42:05 IST" name="Valid positive Test cases " finished-at="2023-11-30T21:44:33 IST" duration-ms="148005">
+    <test started-at="2023-12-01T12:59:36 IST" name="Positive Test Cases" finished-at="2023-12-01T12:59:38 IST" duration-ms="1981">
       <class name="com.spicejet.test.SignUpTest_Positive">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.test.SignUpTest_Positive@48bb62]" started-at="2023-11-30T21:42:05 IST" name="setUp" finished-at="2023-11-30T21:42:05 IST" duration-ms="32" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.test.SignUpTest_Positive@7c37508a]" started-at="2023-12-01T12:59:36 IST" name="setUp" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1701415776410" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
+in D:\EclipseIDE\pj1_framework\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
+in D:\EclipseIDE\pj1_framework\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="signUpWithValidCredentials()[pri:1, instance:com.spicejet.test.SignUpTest_Positive@48bb62]" started-at="2023-11-30T21:42:05 IST" name="signUpWithValidCredentials" finished-at="2023-11-30T21:44:32 IST" duration-ms="147115" status="PASS">
+        <test-method signature="signUpWithValidCredentials()[pri:1, instance:com.spicejet.test.SignUpTest_Positive@7c37508a]" started-at="2023-12-01T12:59:36 IST" name="signUpWithValidCredentials" finished-at="2023-12-01T12:59:36 IST" duration-ms="1" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
+in D:\EclipseIDE\pj1_framework\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
+in D:\EclipseIDE\pj1_framework\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpWithValidCredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.SignUpTest_Positive@48bb62]" started-at="2023-11-30T21:44:32 IST" name="closeBrowser" finished-at="2023-11-30T21:44:33 IST" duration-ms="776" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.SignUpTest_Positive@7c37508a]" started-at="2023-12-01T12:59:36 IST" name="closeBrowser" finished-at="2023-12-01T12:59:36 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.spicejet.test.SignUpTest_Positive -->
-    </test> <!-- Valid positive Test cases  -->
-    <test started-at="2023-11-30T21:44:33 IST" name="InValid Negative Test cases" finished-at="2023-11-30T21:46:57 IST" duration-ms="143555">
+      <class name="com.spicejet.test.LoginTest_P_DataPVDR">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.test.LoginTest_P_DataPVDR@247310d0]" started-at="2023-12-01T12:59:36 IST" name="setUp" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1701415776496" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
+in D:\EclipseIDE\pj1_framework\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
+in D:\EclipseIDE\pj1_framework\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginWithValidCredentials(java.lang.String,java.lang.String)[pri:2, instance:com.spicejet.test.LoginTest_P_DataPVDR@247310d0]" started-at="2023-12-01T12:59:38 IST" name="loginWithValidCredentials" data-provider="fetchData" finished-at="2023-12-01T12:59:38 IST" duration-ms="1" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[devanandh2902@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Batman12@#]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
+in D:\EclipseIDE\pj1_framework\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
+in D:\EclipseIDE\pj1_framework\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.LoginTest_P_DataPVDR@247310d0]" started-at="2023-12-01T12:59:38 IST" name="closeBrowser" finished-at="2023-12-01T12:59:38 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.spicejet.test.LoginTest_P_DataPVDR -->
+    </test> <!-- Positive Test Cases -->
+    <test started-at="2023-12-01T12:59:38 IST" name="Negative Test cases" finished-at="2023-12-01T13:10:18 IST" duration-ms="639792">
       <class name="com.spicejet.test.SignUpTest_Negative">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.test.SignUpTest_Negative@548a24a]" started-at="2023-11-30T21:44:33 IST" name="setUp" finished-at="2023-11-30T21:44:33 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.test.SignUpTest_Negative@2a8448fa]" started-at="2023-12-01T12:59:38 IST" name="setUp" finished-at="2023-12-01T12:59:38 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,15 +204,88 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="signUpWithInValidCredentials()[pri:0, instance:com.spicejet.test.SignUpTest_Negative@548a24a]" started-at="2023-11-30T21:44:33 IST" name="signUpWithInValidCredentials" finished-at="2023-11-30T21:46:56 IST" duration-ms="142785" status="PASS">
+        <test-method signature="signUpWithInValidCredentials()[pri:0, instance:com.spicejet.test.SignUpTest_Negative@2a8448fa]" started-at="2023-12-01T12:59:38 IST" name="signUpWithInValidCredentials" finished-at="2023-12-01T13:02:08 IST" duration-ms="149660" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpWithInValidCredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.SignUpTest_Negative@548a24a]" started-at="2023-11-30T21:46:56 IST" name="closeBrowser" finished-at="2023-11-30T21:46:57 IST" duration-ms="761" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.SignUpTest_Negative@2a8448fa]" started-at="2023-12-01T13:02:08 IST" name="closeBrowser" finished-at="2023-12-01T13:02:08 IST" duration-ms="857" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.spicejet.test.SignUpTest_Negative -->
-    </test> <!-- InValid Negative Test cases -->
-  </suite> <!-- SpiceJet -->
+      <class name="com.spicejet.test.LoginTest_N_DataPVDR">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.test.LoginTest_N_DataPVDR@6f204a1a]" started-at="2023-12-01T13:02:08 IST" name="setUp" finished-at="2023-12-01T13:02:08 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginWithInValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.spicejet.test.LoginTest_N_DataPVDR@6f204a1a]" started-at="2023-12-01T13:02:09 IST" name="loginWithInValidCredentials" data-provider="fetchData" finished-at="2023-12-01T13:04:51 IST" duration-ms="162369" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc123@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInValidCredentials -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.LoginTest_N_DataPVDR@6f204a1a]" started-at="2023-12-01T13:04:51 IST" name="closeBrowser" finished-at="2023-12-01T13:04:51 IST" duration-ms="244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method signature="loginWithInValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.spicejet.test.LoginTest_N_DataPVDR@6f204a1a]" started-at="2023-12-01T13:04:51 IST" name="loginWithInValidCredentials" data-provider="fetchData" finished-at="2023-12-01T13:07:35 IST" duration-ms="163657" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[!"£$%^@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInValidCredentials -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.LoginTest_N_DataPVDR@6f204a1a]" started-at="2023-12-01T13:07:35 IST" name="closeBrowser" finished-at="2023-12-01T13:07:35 IST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method signature="loginWithInValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.spicejet.test.LoginTest_N_DataPVDR@6f204a1a]" started-at="2023-12-01T13:07:35 IST" name="loginWithInValidCredentials" data-provider="fetchData" finished-at="2023-12-01T13:10:18 IST" duration-ms="162480" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[01234"yahoo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[qwerty]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInValidCredentials -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.LoginTest_N_DataPVDR@6f204a1a]" started-at="2023-12-01T13:10:18 IST" name="closeBrowser" finished-at="2023-12-01T13:10:18 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.spicejet.test.LoginTest_N_DataPVDR -->
+    </test> <!-- Negative Test cases -->
+  </suite> <!-- Suite -->
 </testng-results>
