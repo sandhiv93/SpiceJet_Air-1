@@ -87,7 +87,7 @@ public class OW_Page extends SeWrappers{
 	@FindBy(xpath = "(//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep'])[1]")
 	public WebElement title;
 	public void clicktitle(int value) {
-		waitforelementExplicitwait(title, 10);
+		waitforelementExplicitwait(title, 20);
 		setImplicitWait(15);
 		selectByindexDropDown(title, value);
 	}
@@ -95,36 +95,36 @@ public class OW_Page extends SeWrappers{
 	public WebElement Fname;
 	public void enterFname(String fname) throws InterruptedException {
 		clickElement(Fname);
-		setImplicitWait(15);
+		waitforelementExplicitwait(Fname, 10);
 		Fname.clear();
-		Thread.sleep(3000);
+		waitforelementExplicitwait(Fname, 40);
 		typeText(Fname, fname);
 	}
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[3]/div/div/div[2]/input")
 	public WebElement Lname;
 	public void enterLname(String lname) throws InterruptedException {
 		clickElement(Lname);
-		setImplicitWait(15);
+		waitforelementExplicitwait(Lname, 10);
 		Lname.clear();
-		Thread.sleep(3000);
+		waitforelementExplicitwait(Lname, 40);
 		typeText(Lname, lname);
 	}
 	@FindBy(xpath = "//*[@data-testid='contact-number-input-box']")
 	public WebElement contactbox;
 	public void entercontactNumber(String number) throws InterruptedException {
 		clickElement(contactbox);
-		setImplicitWait(15);
+		waitforelementExplicitwait(contactbox, 10);
 		contactbox.clear();
-		Thread.sleep(3000);
+		waitforelementExplicitwait(contactbox, 40);
 		typeText(contactbox, number);
 	}
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[4]/div[1]/div/div/div[2]/input")
 	public WebElement mailid;
 	public void enteremailid(String email) throws InterruptedException {
 		clickElement(mailid);
-		setImplicitWait(15);
+		waitforelementExplicitwait(mailid, 10);
 		mailid.clear();
-		Thread.sleep(3000);
+		waitforelementExplicitwait(mailid, 40);
 		typeText(mailid , email);
 	}
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[4]/div[3]/div/div/div[2]/input")

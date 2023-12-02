@@ -15,8 +15,8 @@ public class OWTest extends SeWrappers {
 	@Test(priority=3)
 	public void oneWayTrip(){
 		try{
-			repo.setTCDesc("OneWayTrip With Passenger Details of SpiceJet functionality");
-			launchBrowser();
+			Reports.setTCDesc("OneWayTrip With Passenger Details of SpiceJet functionality");
+			//launchBrowser();
 			sj.oneWaywrapper("che", "mum", 0, "Muruganandh", "Srinivasan", "9566259258", "devanandh2902@gmail.com", "Chennai");
 			
 		}
@@ -30,7 +30,7 @@ public class OWTest extends SeWrappers {
 	public void closeBrowser(){
 		try{
 			driver.close();
-			repo.reportStep("PASS", "Browser closed successfully");
+			Reports.reportStep("PASS", "Browser closed successfully");
 		}
 		catch(Exception ex){
 			System.out.println("Problem in closing the browser");
