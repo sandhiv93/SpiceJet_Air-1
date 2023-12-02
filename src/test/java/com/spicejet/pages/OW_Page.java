@@ -35,7 +35,7 @@ public class OW_Page extends SeWrappers{
 	public WebElement to;
 
 	public void enterToPlace(String place2) {
-		waitforelementExplicitwait(to, 15);
+		waitforelementExplicitwait(to, 20);
 		clickElement(to);
 		typeText(to, place2);
 	}

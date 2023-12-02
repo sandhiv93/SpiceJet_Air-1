@@ -63,12 +63,20 @@ public class SJWrappers extends SeWrappers{
 			OW_Page oneTrip= PageFactory.initElements(driver, OW_Page.class);
 			oneTrip.enterFromPlace(place1);
 			oneTrip.enterToPlace(place2);
+			oneTrip.selectDepaDate();
+			oneTrip.selectReqDate();
+			oneTrip.clicksearchFlight();
+			oneTrip.clickcontinueButton();
 			oneTrip.clicktitle(value);
 			oneTrip.enterFname(fname);
 			oneTrip.enterLname(lname);
 			oneTrip.entercontactNumber(number);
 			oneTrip.enteremailid(email);
 			oneTrip.entertownName(city);
+			oneTrip.clickcheckBox();
+			oneTrip.clickContinue();
+			oneTrip.clickContinue2();
+			oneTrip.clickSkipSkip();
 		}
 		catch(Exception e)
 		{
