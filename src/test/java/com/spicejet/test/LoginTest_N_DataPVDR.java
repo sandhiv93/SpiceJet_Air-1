@@ -64,7 +64,7 @@ public class LoginTest_N_DataPVDR extends SeWrappers{
 		try{
 			Reports.setTCDesc("Negative tc for SpiceJet LoginPage functionality with Invalid credentials");
 			se.launchBrowser();
-			sj.loginwrapper("abc123@gmail.com", "123456");
+			sj.loginwrapper("abc123@gmail.com", "123456", " ");
 			se.screenshot("LoginTest_N_DataPVDR");		
 		     Assert.assertFalse(false);
 		}
