@@ -17,16 +17,14 @@ public class RTTest extends SeWrappers {
 	@Test(priority=4)
 	public void roundTrip(){
 		try {
-			repo.setTCDesc("OneWayTrip With Passenger Details of SpiceJet functionality");
-			launchBrowser();
+			Reports.setTCDesc("OneWayTrip With Passenger Details of SpiceJet functionality");
+//			/launchBrowser();
 			sj.roundTripwrapper("che", "mum", 0, "Muruganandh", "Srinivasan", "9566259258", "devanandh2902@gmail.com", "Chennai");
 		} 
 		catch(Exception ex){
 			ex.printStackTrace();
 			System.out.println("Fail to Validate RoundTrip");
 			Reports.reportStep("FAIL", "Problem while RoundWayTrip in SpiceJet");
-
-
 		}
 	}
 	@AfterMethod
