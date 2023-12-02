@@ -7,9 +7,10 @@
       <class name="com.spicejet.utils.SeWrappers"/>
       <class name="com.spicejet.utils.SJWrappers"/>
       <!--<class name="com.spicejet.test.SignUpTest_Positive"/>-->
-      <class name="com.spicejet.test.LoginTest_P_DataPVDR"/>
-      <class name="com.spicejet.test.OWTest"/>
+      <!--<class name="com.spicejet.test.LoginTest_P_DataPVDR"/>-->
+      <!--<class name="com.spicejet.test.OWTest"/>-->
       <class name="com.spicejet.test.RTTest"/>
+      <class name="com.spicejet.test.PayTest"/>
     </classes>
   </test> <!-- Test -->
   <test name="Negative Test cases">

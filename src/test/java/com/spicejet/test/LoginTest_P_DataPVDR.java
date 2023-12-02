@@ -63,7 +63,7 @@ public class LoginTest_P_DataPVDR extends SeWrappers{
 	public void loginWithValidCredentials() {
 		try {
 			Reports.setTCDesc("SpiceJet LoginPage functionality with valid credentials");
-			launchBrowser();
+			//launchBrowser();
 			sj.loginwrapper("devanandh2902@gmail.com", "Batman12@#", " ");
 			sj.screenshot("Positive_Login_DataPVDR");
 			Assert.assertFalse(false);

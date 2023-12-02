@@ -3,6 +3,7 @@ package com.spicejet.utils;
 import org.openqa.selenium.support.PageFactory;
 
 import com.spicejet.pages.OW_Page;
+import com.spicejet.pages.PayPage;
 import com.spicejet.pages.RT_Page;
 import com.spicejet.pages.Login_Page;
 import com.spicejet.pages.OW_Page;
@@ -121,6 +122,25 @@ public class SJWrappers extends SeWrappers{
 		{
 			e.printStackTrace();
 		}
+	}
 
+
+	//Dummy Payment Data
+
+	public void paymentwrapper(String cardnum, String myname, String month, String year, String cvvnum) {
+		try {
+			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
+			OW_Page oneTrip= PageFactory.initElements(driver, OW_Page.class);
+			RT_Page roTrip= PageFactory.initElements(driver, RT_Page.class);
+			PayPage pay = PageFactory.initElements(driver, PayPage.class);
+			pay.entercardnumber(cardnum);
+			pay.entercardName(myname);
+			pay.entercardMonth(month);
+			pay.entercardYear(year);
+			pay.enterCVVNum(cvvnum);
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
