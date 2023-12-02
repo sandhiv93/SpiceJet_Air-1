@@ -3,6 +3,7 @@ package com.spicejet.utils;
 import org.openqa.selenium.support.PageFactory;
 
 import com.spicejet.pages.OW_Page;
+import com.spicejet.pages.RT_Page;
 import com.spicejet.pages.Login_Page;
 import com.spicejet.pages.OW_Page;
 import com.spicejet.pages.SignUp_Page;
@@ -61,6 +62,7 @@ public class SJWrappers extends SeWrappers{
 		try{
 			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
 			OW_Page oneTrip= PageFactory.initElements(driver, OW_Page.class);
+			oneTrip.clickonewaybutton();
 			oneTrip.enterFromPlace(place1);
 			oneTrip.enterToPlace(place2);
 			oneTrip.selectDepaDate();
@@ -77,6 +79,41 @@ public class SJWrappers extends SeWrappers{
 			oneTrip.clickContinue();
 			oneTrip.clickContinue2();
 			oneTrip.clickSkipSkip();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+
+	//////////////////////////////////////////////////////////
+
+	//Round Trip Method
+	public void roundTripwrapper(String place1, String place2, int value, String fname, String lname,
+			String number, String email, String city) {
+		try{
+			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
+			RT_Page roTrip= PageFactory.initElements(driver, RT_Page.class);
+			roTrip.clickRoundTripbutton();
+			roTrip.enterFromPlace(place1);
+			roTrip.enterToPlace(place2);
+			roTrip.selectDepaDate();
+			roTrip.selectReqDate();
+			roTrip.selectReturnDate();
+			roTrip.selectReturnreqDate();
+			roTrip.clicksearchFlight();
+			roTrip.clickcontinueButton();
+			roTrip.clicktitle(value);
+			roTrip.enterFname(fname);
+			roTrip.enterLname(lname);
+			roTrip.entercontactNumber(number);
+			roTrip.enteremailid(email);
+			roTrip.entertownName(city);
+			roTrip.clickcheckBox();
+			roTrip.clickContinue();
+			roTrip.clickContinue2();
+			roTrip.clickSkipSkip();
 		}
 		catch(Exception e)
 		{

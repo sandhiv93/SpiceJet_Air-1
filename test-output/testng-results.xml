@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-02T11:15:54 IST" name="Suite" finished-at="2023-12-02T11:18:04 IST" duration-ms="130198">
+  <suite started-at="2023-12-02T15:10:09 IST" name="Suite" finished-at="2023-12-02T15:11:13 IST" duration-ms="64369">
     <groups>
     </groups>
-    <test started-at="2023-12-02T11:15:54 IST" name="Positive Test Cases" finished-at="2023-12-02T11:18:04 IST" duration-ms="130071">
-      <class name="com.spicejet.test.OWTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.test.OWTest@402c4085]" started-at="2023-12-02T11:15:54 IST" name="setUp" finished-at="2023-12-02T11:15:54 IST" duration-ms="34" status="PASS">
+    <test started-at="2023-12-02T15:10:09 IST" name="Positive Test Cases" finished-at="2023-12-02T15:11:13 IST" duration-ms="64207">
+      <class name="com.spicejet.test.RTTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.test.RTTest@5386659f]" started-at="2023-12-02T15:10:09 IST" name="setUp" finished-at="2023-12-02T15:10:09 IST" duration-ms="64" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,13 +18,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="oneWayTrip()[pri:3, instance:com.spicejet.test.OWTest@402c4085]" started-at="2023-12-02T11:15:54 IST" name="oneWayTrip" finished-at="2023-12-02T11:18:04 IST" duration-ms="129943" status="PASS">
+        <test-method signature="roundTrip()[pri:4, instance:com.spicejet.test.RTTest@5386659f]" started-at="2023-12-02T15:10:09 IST" name="roundTrip" finished-at="2023-12-02T15:11:13 IST" duration-ms="64032" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- oneWayTrip -->
-      </class> <!-- com.spicejet.test.OWTest -->
+        </test-method> <!-- roundTrip -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.RTTest@5386659f]" started-at="2023-12-02T15:11:13 IST" name="closeBrowser" finished-at="2023-12-02T15:11:13 IST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.spicejet.test.RTTest -->
     </test> <!-- Positive Test Cases -->
-    <test started-at="2023-12-02T11:18:04 IST" name="Negative Test cases" finished-at="2023-12-02T11:18:04 IST" duration-ms="2">
+    <test started-at="2023-12-02T15:11:13 IST" name="Negative Test cases" finished-at="2023-12-02T15:11:13 IST" duration-ms="2">
     </test> <!-- Negative Test cases -->
   </suite> <!-- Suite -->
 </testng-results>

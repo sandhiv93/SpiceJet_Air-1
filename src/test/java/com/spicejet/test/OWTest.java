@@ -24,8 +24,6 @@ public class OWTest extends SeWrappers {
 			ex.printStackTrace();
 			System.out.println("Fail to Validate OneWayTrip With Passenger Details");
 			Reports.reportStep("FAIL", "Problem while OneWayTrip");
-
-
 		}
 	}
 	
@@ -40,5 +38,4 @@ public class OWTest extends SeWrappers {
 			ex.printStackTrace();
 		}
 	}
-	
 }
