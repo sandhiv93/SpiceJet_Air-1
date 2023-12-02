@@ -8,6 +8,7 @@ import com.spicejet.pages.RT_Page;
 import com.spicejet.pages.Login_Page;
 import com.spicejet.pages.OW_Page;
 import com.spicejet.pages.SignUp_Page;
+import com.spicejet.pages.extraTaskPage;
 
 public class SJWrappers extends SeWrappers{
 
@@ -126,7 +127,6 @@ public class SJWrappers extends SeWrappers{
 
 
 	//Dummy Payment Data
-
 	public void paymentwrapper(String cardnum, String myname, String month, String year, String cvvnum) {
 		try {
 			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
@@ -141,6 +141,23 @@ public class SJWrappers extends SeWrappers{
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	//Extra Tasks
+	public void extrataskWrapper(){
+		try{
+			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
+			extraTaskPage ETPage= PageFactory.initElements(driver, extraTaskPage.class);
+			ETPage.clickcheckInn();
+			ETPage.clickflightstatus();
+			ETPage.clickmanageBook();
+			screenshot("CheckInn");
+			screenshot("FlightStatus");
+			screenshot("ManageBooking");
+		}
+		catch(Exception ex){
+			ex.printStackTrace();
 		}
 	}
 }
