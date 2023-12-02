@@ -12,7 +12,7 @@ public class SJWrappers extends SeWrappers{
 
 	//SignUp page methods
 	public void signupwrapper(int num, String Fname, String Lname, String date, String month, String year, String mobilenum, String emailid,
-			String newpwd, String Copwd) {
+			String newpwd, String Copwd, String URLbroken) {
 		try {
 			SignUp_Page signupPage = PageFactory.initElements(driver, SignUp_Page.class);
 			signupPage.clicksignup();
@@ -29,6 +29,7 @@ public class SJWrappers extends SeWrappers{
 			signupPage.enterconfirmPassword(Copwd);
 			signupPage.clicktermsandCo();
 			signupPage.clicksubmitSignup();
+			signupPage.getmyAllDetails(URLbroken);
 			screenshot("SignUpPage_SpiceJet");
 		} 
 		catch (Exception e) {
@@ -39,7 +40,7 @@ public class SJWrappers extends SeWrappers{
 	//////////////////////////////////////////////////////////
 
 	//Login Page Methods
-	public void loginwrapper(String myemaild, String mypassowrd) {
+	public void loginwrapper(String myemaild, String mypassowrd, String URLbroken) {
 		try {
 			Login_Page loginPage = PageFactory.initElements(driver, Login_Page.class);
 			loginPage.clickloginMainpage();
@@ -47,6 +48,7 @@ public class SJWrappers extends SeWrappers{
 			loginPage.enteremailid(myemaild);
 			loginPage.enterpassword(mypassowrd);
 			loginPage.clickLoginMyacc();
+			loginPage.getmyAllDetails(URLbroken);
 			screenshot("LoginPage");
 		} 
 		catch (Exception e) {

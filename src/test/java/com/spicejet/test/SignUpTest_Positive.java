@@ -18,15 +18,15 @@ public class SignUpTest_Positive extends SeWrappers{
 	@Test(priority=1)
 	public void signUpWithValidCredentials(){
 		try{
-			repo.setTCDesc("SignUp of SpiceJet functionality with valid credentials");
+			Reports.setTCDesc("SignUp of SpiceJet functionality with valid credentials");
 			launchBrowser();
-			sj.signupwrapper(1, "Muruganandh", "Srinivasan", "29", "1996", "February", "9566259258", "devanandh2902@gmail.com", "Batman12@#", "Batman12@#");
+			sj.signupwrapper(1, "Muruganandh", "Srinivasan", "29", "1996", "February", "9566259258", "devanandh2902@gmail.com", "Batman12@#", "Batman12@#", " ");
 		    Assert.assertFalse(false);
 		}
 		catch(Exception ex){
 			ex.printStackTrace();
 			System.out.println("Fail to SignUp");
-			repo.reportStep("FAIL", "Problem while SignUp");
+			Reports.reportStep("FAIL", "Problem while SignUp");
 		}
 	}
 	
@@ -34,11 +34,11 @@ public class SignUpTest_Positive extends SeWrappers{
 	public void closeBrowser(){
 		try{
 			driver.	quit();
-			repo.reportStep("PASS", "Browser closed successfully");
+			Reports.reportStep("PASS", "Browser closed successfully");
 		}
 		catch(Exception ex){
 			System.out.println("Problem in closing the browser");
-			repo.reportStep("FAIL", "Problem in closing the browser");
+			Reports.reportStep("FAIL", "Problem in closing the browser");
 			ex.printStackTrace();
 		}
 	}

@@ -55,10 +55,10 @@ public class SignUp_Page extends SeWrappers{
 	//////////////////////////////////////////////////////////
 
 	//5. Click DOB calendar 
-	
+
 	@FindBy(xpath="//*[@id='dobDate']")
 	public WebElement calenderClick;
-	
+
 	public void clickCalendar() {
 		waitforelementExplicitwait(calenderClick, 20);
 		clickElement(calenderClick);
@@ -66,21 +66,21 @@ public class SignUp_Page extends SeWrappers{
 
 	@FindBy(xpath="//div[@aria-label='Choose Thursday, February 29th, 1996']")
 	public WebElement dateClick;
-	
+
 	public void enterDate(String date) {
 		waitforelementExplicitwait(dateClick, 10);
 		typeText(dateClick, date);
 	}
 	@FindBy(xpath="//*[@class='react-datepicker__month-select']")
 	public WebElement MonthClick;
-	
+
 	public void enterMonth(String month) {
 		waitforelementExplicitwait(MonthClick, 10);
 		typeText(MonthClick, month);
 	}
 	@FindBy(xpath="//*[@class='react-datepicker__year-select']")
 	public WebElement YearClick;
-	
+
 	public void enterYear(String year) {
 		waitforelementExplicitwait(YearClick, 10);
 		typeText(MonthClick, year);
@@ -91,7 +91,7 @@ public class SignUp_Page extends SeWrappers{
 	//6. Enter Mobile Number
 	@FindBy(xpath = "//input[@placeholder='+91 01234 56789']")
 	public WebElement mobilenum;
-	
+
 	public void enterMobilenum(String number) {
 		waitforelementExplicitwait(mobilenum, 10);
 		typeText(mobilenum, number);
@@ -102,7 +102,7 @@ public class SignUp_Page extends SeWrappers{
 	//7. Enter emailid
 	@FindBy(xpath = "//input[@id='email_id']")
 	public WebElement emailid;
-	
+
 	public void enterEmailId(String email) {
 		waitforelementExplicitwait(emailid, 10);
 		typeText(emailid, email);
@@ -113,7 +113,7 @@ public class SignUp_Page extends SeWrappers{
 	//8. Enter Newpassword
 	@FindBy(xpath = "//input[@id='new-password']")
 	public WebElement newpasswd;
-	
+
 	public void enternewPassword(String Npwd) {
 		waitforelementExplicitwait(newpasswd, 10);
 		typeText(newpasswd, Npwd);
@@ -124,7 +124,7 @@ public class SignUp_Page extends SeWrappers{
 	//9. Enter ConfirmPassword
 	@FindBy(xpath = "//input[@id='c-password']")
 	public WebElement confirmpasswd;
-	
+
 	public void enterconfirmPassword(String Conpwd) {
 		waitforelementExplicitwait(confirmpasswd, 10);
 		typeText(confirmpasswd, Conpwd);
@@ -135,7 +135,7 @@ public class SignUp_Page extends SeWrappers{
 	//10. Click Terms and conditions
 	@FindBy(xpath = "//input[@id='defaultCheck1']")
 	public WebElement termsandCoButton;
-	
+
 	public void clicktermsandCo() {
 		waitforelementExplicitwait(termsandCoButton, 10);
 		clickElement(termsandCoButton);
@@ -146,10 +146,21 @@ public class SignUp_Page extends SeWrappers{
 	//11.Click Submit button for SignUp
 	@FindBy(xpath = "//button[normalize-space()='Submit']")
 	public WebElement submitButton;
-	
+
 	public void clicksubmitSignup() {
 		waitforelementExplicitwait(submitButton, 10);
 		clickElement(submitButton);
 	}
-	
+
+	//////////////////////////////////////////////////////////
+	//12. Verify Account Login successfull
+	@FindBy(xpath = "//div[normalize-space()='Hi Muruganandh']")
+	public WebElement Myname;
+
+	public void getmyAllDetails(String title) {
+		getTextFromElement(Myname);
+		getTitle();
+		getCurrentUrl();
+		isURLReachable(title);
+	}
 }

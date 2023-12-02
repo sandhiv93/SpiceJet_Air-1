@@ -1,6 +1,8 @@
 package com.spicejet.utils;
 
 import java.io.File;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
@@ -762,8 +764,7 @@ public class SeWrappers {
 		    }
 		}
 		
-		//51. Method for Thread.sleep
-		// 5. Method to click on the webelement in the webpage
+		//51. Method for Thread.sleep 
 		public void clicksleepElement(WebElement element) {
 		    try {
 		        element.click();
@@ -775,6 +776,21 @@ public class SeWrappers {
 		        e.printStackTrace();
 		    }
 		}
+
+		
+		//52.Method to check if a URL is reachable (not broken)
+	    public boolean isURLReachable(String urlString) {
+	        try {
+	            URL url = new URL(urlString);
+	            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+	            connection.setRequestMethod("HEAD");
+	            int responseCode = connection.getResponseCode();
+	            return (responseCode == HttpURLConnection.HTTP_OK);
+	        } catch (Exception ex) {
+	            ex.printStackTrace();
+	            return false;
+	        }
+	    }
 
 
 }

@@ -19,9 +19,9 @@ public class Reports
 	@BeforeSuite(alwaysRun=true)
 	public static void startReport(){
 		try{	
-			sparkReporter= new ExtentSparkReporter(System.getProperty("user.dir")+"/SpiceJetWebAutomationReport.html");
-			sparkReporter.config().setReportName("SpiceJet Web Automation");
-			sparkReporter.config().setDocumentTitle("Web Automation Report");
+			sparkReporter= new ExtentSparkReporter(System.getProperty("user.dir")+"/SJAirWebAutomationReport.html");
+			sparkReporter.config().setReportName("SJ Airlines Web Automation");
+			sparkReporter.config().setDocumentTitle("Web Auto Report");
 			sparkReporter.config().setTheme(Theme.STANDARD);
 			
 			extentReports= new ExtentReports();
