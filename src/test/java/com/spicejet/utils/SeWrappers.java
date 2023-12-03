@@ -110,7 +110,6 @@ public class SeWrappers {
 		try {
 			element.sendKeys(text);
 			Reports.reportStep("PASS", "Typed text" +text+ "Successfully");
-			element.clear();
 		} 
 		catch (Exception e) {
 			Reports.reportStep("FAIL", "Typed text" +text+ "UnSuccessfull");
@@ -659,139 +658,169 @@ public class SeWrappers {
 
 	//43.Method for window handling
 
-		public void switchWindows(){
-			try{
-				String parentWindow= driver.getWindowHandle();
-				Set<String> allWindows= driver.getWindowHandles();
+	public void switchWindows(){
+		try{
+			String parentWindow= driver.getWindowHandle();
+			Set<String> allWindows= driver.getWindowHandles();
 
-				for(String eachWindow:allWindows){
-					
-					if(! parentWindow.equals(eachWindow)){
-						driver.switchTo().window(eachWindow);
-					}
+			for(String eachWindow:allWindows){
+
+				if(! parentWindow.equals(eachWindow)){
+					driver.switchTo().window(eachWindow);
 				}
 			}
-			catch(Exception ex){
-				System.out.println("problem in window handling");
-				ex.printStackTrace();
-			}
 		}
-		//44.Method for get Title
-		public String getTitle(){
-			String title="";
-			try{
-				title=driver.getTitle();
-				System.out.println(title);
-			}
-			catch(Exception ex){
-				System.out.println("problem in getTitle method");
-				ex.printStackTrace();
-			}
-			return title;
+		catch(Exception ex){
+			System.out.println("problem in window handling");
+			ex.printStackTrace();
 		}
-		
-		//45.Method for getCurrentUrl
-		public void getCurrentUrl(){
-			try{
-				String currentUrl=driver.getCurrentUrl();
-				System.out.println(currentUrl);
-			}
-			catch(Exception ex){
-				System.out.println("problem in getCurrent Url method");
-				ex.printStackTrace();
-			}
+	}
+	//44.Method for get Title
+	public String getTitle(){
+		String title="";
+		try{
+			title=driver.getTitle();
+			System.out.println(title);
 		}
+		catch(Exception ex){
+			System.out.println("problem in getTitle method");
+			ex.printStackTrace();
+		}
+		return title;
+	}
 
-		//46.Method for getScreenshot name for different capture
-		public void screenshot(String screenshotName){
-			try{
-				File source= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-				File dest= new File(System.getProperty("user.dir")+"/ScreenShots/"+screenshotName+".png");
-				FileUtils.copyFile(source, dest);
-			}
-			catch(Exception ex){
-				ex.printStackTrace();
-			}
+	//45.Method for getCurrentUrl
+	public void getCurrentUrl(){
+		try{
+			String currentUrl=driver.getCurrentUrl();
+			System.out.println(currentUrl);
 		}
-		
-		//47.Method for switch to parent winodw
-		public void parent(){
-			try{
-				driver.switchTo().defaultContent();
-			}
-			catch(Exception ex){
-				ex.printStackTrace();
-			}
+		catch(Exception ex){
+			System.out.println("problem in getCurrent Url method");
+			ex.printStackTrace();
 		}
-		
-		//48.Method for calendar
-		public void calender(String month1,String year1,String date1){
-			try{
-				WebElement ele=driver.findElement(By.xpath(" //div[contains(@data-testid,'month-"+month1+"-"+year1+"')]//div[@data-testid='undefined-calendar-day-"+date1+"']/div"));
-				ele.click();
-			}
-			catch(Exception ex) {
-				ex.printStackTrace();
-			}
+	}
+
+	//46.Method for getScreenshot name for different capture
+	public void screenshot(String screenshotName){
+		try{
+			File source= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			File dest= new File(System.getProperty("user.dir")+"/ScreenShots/"+screenshotName+".png");
+			FileUtils.copyFile(source, dest);
 		}
-		
-		//49. Method for calendar SignUp
-		public void calenderSignUp() {
-			List<WebElement> dates = driver.findElements(By.xpath("//div[@class='react-datepicker__month-container']//div[@class='react-datepicker__month']/div/div"));
-			int count=dates.size();
-			for(int i=0;i<count;i++){
-				String text=driver.findElements(By.xpath("//div[@tabindex='-1']")).get(i).getText();
-				if(text.equalsIgnoreCase("5")){
+		catch(Exception ex){
+			ex.printStackTrace();
+		}
+	}
+
+	//47.Method for switch to parent winodw
+	public void parent(){
+		try{
+			driver.switchTo().defaultContent();
+		}
+		catch(Exception ex){
+			ex.printStackTrace();
+		}
+	}
+
+	//48.Method for calendar
+	public void calender(String month1,String year1,String date1){
+		try{
+			WebElement ele=driver.findElement(By.xpath(" //div[contains(@data-testid,'month-"+month1+"-"+year1+"')]//div[@data-testid='undefined-calendar-day-"+date1+"']/div"));
+			ele.click();
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
+	}
+
+	//49. Method for calendar SignUp
+	public void calenderSignUp() {
+		List<WebElement> dates = driver.findElements(By.xpath("//div[@class='react-datepicker__month-container']//div[@class='react-datepicker__month']/div/div"));
+		int count=dates.size();
+		for(int i=0;i<count;i++){
+			String text=driver.findElements(By.xpath("//div[@tabindex='-1']")).get(i).getText();
+			if(text.equalsIgnoreCase("5")){
 				driver.findElements(By.xpath("//*[@class='react-datepicker__month-container']//*[@role='button']")).get(i).click();
 				break;
-				}
-			} 
-		}
-		
-		//50. Method for click radiobutton
-		public void clickRadioButton(WebElement radioButton) {
-		    try {
-		        if (!radioButton.isSelected()) {
-		            radioButton.click();
-		            Reports.reportStep("PASS", "Clicking radio button is successful");
-		        } else {
-		            Reports.reportStep("INFO", "Radio button is already selected");
-		        }
-		    } catch (Exception e) {
-		        System.out.println("Problem arose because of unable to click the radio button");
-		        Reports.reportStep("FAIL", "Problem in clicking radio button");
-		        e.printStackTrace();
-		    }
-		}
-		
-		//51. Method for Thread.sleep 
-		public void clicksleepElement(WebElement element) {
-		    try {
-		        element.click();
-		        Reports.reportStep("PASS", "WebElement " + element + " Clicked Successfully");
-		        Thread.sleep(5000); // Introduce a 5-second delay after clicking the element
-		    } catch (Exception e) {
-		        Reports.reportStep("FAIL", "WebElement " + element + " Unsuccessful");
-		        System.out.println("Problem arises because of unable to click the webelement");
-		        e.printStackTrace();
-		    }
-		}
+			}
+		} 
+	}
 
-		
-		//52.Method to check if a URL is reachable (not broken)
-	    public boolean isURLReachable(String urlString) {
-	        try {
-	            URL url = new URL(urlString);
-	            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-	            connection.setRequestMethod("HEAD");
-	            int responseCode = connection.getResponseCode();
-	            return (responseCode == HttpURLConnection.HTTP_OK);
-	        } catch (Exception ex) {
-	            ex.printStackTrace();
-	            return false;
-	        }
+	//50. Method for click radiobutton
+	public void clickRadioButton(WebElement radioButton) {
+		try {
+			if (!radioButton.isSelected()) {
+				radioButton.click();
+				Reports.reportStep("PASS", "Clicking radio button is successful");
+			} else {
+				Reports.reportStep("INFO", "Radio button is already selected");
+			}
+		} catch (Exception e) {
+			System.out.println("Problem arose because of unable to click the radio button");
+			Reports.reportStep("FAIL", "Problem in clicking radio button");
+			e.printStackTrace();
+		}
+	}
+
+	//51. Method for Thread.sleep 
+	public void clicksleepElement(WebElement element) {
+		try {
+			element.click();
+			Reports.reportStep("PASS", "WebElement " + element + " Clicked Successfully");
+			Thread.sleep(5000); // Introduce a 5-second delay after clicking the element
+		} catch (Exception e) {
+			Reports.reportStep("FAIL", "WebElement " + element + " Unsuccessful");
+			System.out.println("Problem arises because of unable to click the webelement");
+			e.printStackTrace();
+		}
+	}
+
+
+	//52.Method to check if a URL is reachable (not broken)
+	public boolean isURLReachable(String urlString) {
+		try {
+			URL url = new URL(urlString);
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestMethod("HEAD");
+			int responseCode = connection.getResponseCode();
+			return (responseCode == HttpURLConnection.HTTP_OK);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			return false;
+		}
+	}
+
+	// Method to clear the selected text in a WebElement
+    public void clearSelectedText(WebElement element) {
+        try {
+            // Create an instance of the Actions class
+            Actions actions = new Actions(driver);
+            // Click and hold on the element to select its text
+            actions.clickAndHold(element).perform();
+            // Release the mouse to clear the selected text
+            actions.release().perform();
+            // Report the success
+            Reports.reportStep("PASS", "Cleared selected text from WebElement " + element + " successfully");
+        } catch (Exception e) {
+            // Report the failure
+            Reports.reportStep("FAIL", "Unable to clear selected text from WebElement " + element);
+            System.out.println("Problem arose because of unable to clear selected text from the WebElement");
+            e.printStackTrace();
+        }
+    }
+
+	//54. Method for selecting text in a WebElement
+	public void selectText(WebElement element) {
+	    try {       
+	        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+	        Reports.reportStep("PASS", "Selected text in WebElement " + element + " successfully");
+	    } catch (Exception e) {
+	        Reports.reportStep("FAIL", "Unable to select text in WebElement " + element);
+	        System.out.println("Problem arose because of unable to select text in the WebElement");
+	        e.printStackTrace();
 	    }
-
+	}
 
 }
 

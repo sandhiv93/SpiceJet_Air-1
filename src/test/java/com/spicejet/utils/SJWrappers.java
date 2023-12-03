@@ -74,9 +74,13 @@ public class SJWrappers extends SeWrappers{
 			oneTrip.clicksearchFlight();
 			oneTrip.clickcontinueButton();
 			oneTrip.clicktitle(value);
+			//oneTrip.clearFirstname();
 			oneTrip.enterFname(fname);
+			//oneTrip.clearLastname();
 			oneTrip.enterLname(lname);
+			//oneTrip.clearcontactBox();
 			oneTrip.entercontactNumber(number);
+			//oneTrip.clearmailid();
 			oneTrip.enteremailid(email);
 			oneTrip.entertownName(city);
 			oneTrip.clickcheckBox();
@@ -109,9 +113,13 @@ public class SJWrappers extends SeWrappers{
 			roTrip.clicksearchFlight();
 			roTrip.clickcontinueButton();
 			roTrip.clicktitle(value);
+			roTrip.clearFirstname();
 			roTrip.enterFname(fname);
+			roTrip.clearLastname();
 			roTrip.enterLname(lname);
+			roTrip.clearcontactBox();
 			roTrip.entercontactNumber(number);
+			roTrip.clearmailid();
 			roTrip.enteremailid(email);
 			roTrip.entertownName(city);
 			roTrip.clickcheckBox();
@@ -119,12 +127,10 @@ public class SJWrappers extends SeWrappers{
 			roTrip.clickContinue2();
 			roTrip.clickSkipSkip();
 		}
-		catch(Exception e)
-		{
+		catch(Exception e){
 			e.printStackTrace();
 		}
 	}
-
 
 	//Dummy Payment Data
 	public void paymentwrapper(String cardnum, String myname, String month, String year, String cvvnum) {

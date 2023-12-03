@@ -43,36 +43,32 @@ public class RT_Page extends SeWrappers{
 	//////////////////////////////////////////////////////////
 
 	//4. In Main page pick depature date
-	@FindBy(xpath = "//div[normalize-space()='Departure Date']")
+	@FindBy(xpath = "//div[text()='Departure Date']")
 	public WebElement departureDate;
 	public void selectDepaDate() throws InterruptedException {
-		clickElement(departureDate);
-		Thread.sleep(5000);
+		actionsDoubleclickElement(departureDate);
 	}
 
-	@FindBy(xpath = "(//div[@dir='auto'][normalize-space()='1'])[2]")
-	//Jan1
+	@FindBy(xpath = "(//div[@class='css-76zvg2 r-homxoj r-ubezar r-16dba41'])[63]")
+	//Feb02
 	public WebElement reqdate;
 	public void selectReqDate() throws InterruptedException {
-		Thread.sleep(5000);
-		waitforelementExplicitwait(reqdate, 10);
 		clickElement(reqdate);
 	}
-	
-	
+
+
 	// In main page pick Return date
-	@FindBy(xpath = "//*[@id=\"main-container\"]/div/div[1]/div[3]/div[2]/div[4]/div/div[1]/div[2]/div[1]")
+	@FindBy(xpath = "//div[text()='Return Date']")
 	public WebElement returnDate;
 	public void selectReturnDate() {
-		waitforelementExplicitwait(returnDate, 10);
-		clickElement(returnDate);
+		waitforelementFluentwait(returnDate, 10, 20);
+		actionsDoubleclickElement(returnDate);
 	}
 
-	@FindBy(xpath = "/html/body/div[2]/div/div/div[1]/div[3]/div[2]/div[4]/div/div[2]/div[2]/div[3]/div[2]/div/div[3]/div/div[3]/div[2]/div[6]/div/div")
+	@FindBy(xpath = "(//div[@class='css-76zvg2 r-homxoj r-ubezar r-16dba41'])[70]")
 	//Feb10
 	public WebElement retreqdate;
 	public void selectReturnreqDate() {
-		waitforelementExplicitwait(retreqdate, 10);
 		clickElement(retreqdate);
 	}
 
@@ -106,61 +102,89 @@ public class RT_Page extends SeWrappers{
 	@FindBy(xpath = "(//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep'])[1]")
 	public WebElement title;
 	public void clicktitle(int value) {
-		waitforelementExplicitwait(title, 10);
+		waitforelementExplicitwait(title, 20);
 		setImplicitWait(15);
 		selectByindexDropDown(title, value);
+	}
+
+	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[2]/div/div/div[2]/input")
+	public WebElement Fnameclear;
+	public void clearFirstname() {
+		actionsDoubleclickElement(Fnameclear);
+		selectText(Fnameclear);
+		waitforelementFluentwait(Fnameclear, 10, 20);
+		clearSelectedText(Fnameclear);
 	}
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[2]/div/div/div[2]/input")
 	public WebElement Fname;
 	public void enterFname(String fname) throws InterruptedException {
 		clickElement(Fname);
-		waitforelementExplicitwait(Fname, 15);
-		Fname.clear();
-		waitforelementExplicitwait(Fname, 40);
+		waitforelementExplicitwait(Fname, 20);
 		typeText(Fname, fname);
 	}
+
+	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[3]/div/div/div[2]/input")
+	public WebElement Lnameclear;
+	public void clearLastname() {
+		actionsDoubleclickElement(Lnameclear);
+		selectText(Lnameclear);
+		waitforelementFluentwait(Fnameclear, 10, 20);
+		clearSelectedText(Lnameclear);
+	}
+
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[3]/div/div/div[2]/input")
 	public WebElement Lname;
 	public void enterLname(String lname) throws InterruptedException {
 		clickElement(Lname);
-		waitforelementExplicitwait(Lname, 15);
-		Lname.clear();
-		waitforelementExplicitwait(Lname, 40);
+		waitforelementExplicitwait(Lname, 20);
 		typeText(Lname, lname);
+	}
+
+	@FindBy(xpath = "//*[@data-testid='contact-number-input-box']")
+	public WebElement contactboxclear;
+	public void clearcontactBox() {
+		actionsDoubleclickElement(contactboxclear);
+		selectText(contactboxclear);
+		waitforelementFluentwait(contactboxclear, 10, 20);
+		clearSelectedText(contactboxclear);
 	}
 	@FindBy(xpath = "//*[@data-testid='contact-number-input-box']")
 	public WebElement contactbox;
 	public void entercontactNumber(String number) throws InterruptedException {
 		clickElement(contactbox);
-		waitforelementExplicitwait(contactbox, 15);
-		contactbox.clear();
-		waitforelementExplicitwait(contactbox, 40);
+		waitforelementExplicitwait(contactbox, 20);
 		typeText(contactbox, number);
+	}
+
+	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[4]/div[1]/div/div/div[2]/input")
+	public WebElement mailidclear;
+	public void clearmailid() {
+		actionsDoubleclickElement(mailidclear);
+		selectText(mailidclear);
+		waitforelementFluentwait(mailidclear, 10, 20);
+		clearSelectedText(mailidclear);
 	}
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[4]/div[1]/div/div/div[2]/input")
 	public WebElement mailid;
 	public void enteremailid(String email) throws InterruptedException {
 		clickElement(mailid);
-		waitforelementExplicitwait(mailid, 15);
-		mailid.clear();
-		waitforelementExplicitwait(mailid, 40);
+		waitforelementExplicitwait(mailid, 20);
 		typeText(mailid , email);
 	}
+
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[4]/div[3]/div/div/div[2]/input")
 	public WebElement townname;
 	public void entertownName(String city) throws InterruptedException {
 		clickElement(townname);
-		setImplicitWait(15);
-		townname.clear();
 		Thread.sleep(3000);
 		typeText(townname, city);
 	}
+
 	@FindBy(xpath = "//div[@class='css-1dbjc4n']//div[@class='css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-1otgn73']//div[@class='css-1dbjc4n r-zso239']")
 	public WebElement checkBox;
 	public void clickcheckBox() {
 		clickElement(checkBox);
 	}
-
 	//////////////////////////////////////////////////////////
 
 	//8.Click continue button in Main page
