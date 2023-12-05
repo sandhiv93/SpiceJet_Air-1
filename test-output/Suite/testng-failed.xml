@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Positive Test Cases(failed)">
+    <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="com.spicejet.test.LoginTest_P_DataPVDR">
+      <class name="com.spicejet.test.OWTest">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="loginWithValidCredentials"/>
+          <include name="oneWayTrip"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.spicejet.test.LoginTest_P_DataPVDR -->
+      </class> <!-- com.spicejet.test.OWTest -->
     </classes>
   </test> <!-- Positive Test Cases(failed) -->
 </suite> <!-- Failed suite [Suite] -->

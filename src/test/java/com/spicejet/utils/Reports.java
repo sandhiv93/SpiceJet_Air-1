@@ -1,6 +1,7 @@
 package com.spicejet.utils;
 
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -69,6 +70,5 @@ public class Reports
 		catch(Exception ex){
 			ex.printStackTrace();
 		}
-	}
-	
+	}	
 }
