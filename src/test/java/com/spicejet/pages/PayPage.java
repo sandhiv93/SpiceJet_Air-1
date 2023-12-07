@@ -12,46 +12,48 @@ public class PayPage extends SeWrappers{
 	//1. Click card and enter number
 	@FindBy(xpath="//iframe[@class='card_number_iframe']")
 	public WebElement FrameCard;
-	public void clickintocardNumframe(int num) {
-		waitforelementExplicitwait(FrameCard, 10);
-		frameByindex(0);
-	}
-
 	@FindBy(xpath="//input[@id='card_number']")
 	public WebElement cardno;
-	public void entercardnumber(String cardnum) {
+	
+	public void clickandEntercardNumframe(String cardnum) {
+		waitforelementExplicitwait(FrameCard, 10);
+		frameByWebElement(FrameCard);
 		waitforelementExplicitwait(cardno, 10);
 		typeText(cardno, cardnum);
+		switchToDefaultContent();
 	}
+	
+	
 	/////////////////////////////////////////////////
 
 	//2. Enter card name
 	@FindBy(xpath="//*[@class='name_on_card_iframe']")
 	public WebElement frameName;
-	public void clickintocardNameframe(int num) {
-		waitforelementExplicitwait(frameName, 10);
-		frameByindex(1);
-	}
 	@FindBy(xpath="//*[@placeholder='Cardholder Name']")
 	public WebElement cardname;
-	public void entercardName(String myname) {
+	
+	public void clickandEntercardNameframe(String myname) {
+		waitforelementExplicitwait(frameName, 10);
+		frameByWebElement(frameName);
 		waitforelementExplicitwait(cardname, 10);
-		typeText(cardname, myname); 
+		typeText(cardname, myname);
+		switchToDefaultContent();
 	}
+	
 	/////////////////////////////////////////////////
 
 	//3. Enter card Month name
 	@FindBy(xpath="//*[@class='card_exp_month_iframe']")
 	public WebElement frameMonth;
-	public void clickintocardMonthframe(int num) {
-		waitforelementExplicitwait(frameMonth, 10);
-		frameByindex(2);
-	}
 	@FindBy(xpath="//*[@placeholder='MM']")
 	public WebElement expmonth;
-	public void entercardMonth(String month) {
+	
+	public void clickandEntercardMonthframe(String month) {
+		waitforelementExplicitwait(frameMonth, 10);
+		frameByWebElement(frameMonth);
 		waitforelementExplicitwait(expmonth, 10);
 		typeText(expmonth, month);
+		switchToDefaultContent();
 	}
 
 	/////////////////////////////////////////////////
@@ -59,16 +61,14 @@ public class PayPage extends SeWrappers{
 	//4. Enter card Year
 	@FindBy(xpath="//*[@class='card_exp_year_iframe']")
 	public WebElement frameYear;
-
-	public void clickintoYearframe(int num) {
-		waitforelementExplicitwait(frameYear, 10);
-		frameByindex(3);
-	}
 	@FindBy(xpath="//*[@placeholder='YY']")
 	public WebElement expYear;
-	public void entercardYear(String year) {
+
+	public void clickandEnterYearframe(String year) {
+		frameByWebElement(frameYear);
 		waitforelementExplicitwait(frameYear, 10);
 		typeText(expYear, year);
+		switchToDefaultContent();
 	}
 
 	/////////////////////////////////////////////////
@@ -76,18 +76,17 @@ public class PayPage extends SeWrappers{
 	//5. Enter card CVV
 	@FindBy(xpath="//*[@class='security_code_iframe']")
 	public WebElement frameCVV;
-
-	public void clickintoCVVframe(int num) {
-		waitforelementExplicitwait(frameCVV, 10);
-		frameByindex(4);
-	}
 	@FindBy(xpath="//*[@placeholder='123']")
 	public WebElement cvvNum;
 
-	public void enterCVVNum(String cvvnum) {
+	public void clickandEnterCVVframe(String cvvnum) {
+		waitforelementExplicitwait(frameCVV, 10);
+		frameByWebElement(frameCVV);
 		waitforelementExplicitwait(cvvNum, 10);
 		typeText(cvvNum, cvvnum);
+		switchToDefaultContent();
 	}
+	
 
 	/////////////////////////////////////////////////
 

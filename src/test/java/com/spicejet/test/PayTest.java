@@ -20,7 +20,6 @@ public class PayTest extends SeWrappers {
 	public void payTest(){
 		try{
 			Reports.setTCDesc("Validating PaymentPage of SpiceJet functionality with dummy credentials");
-			launchBrowser();
 			ow.oneWayTrip();
 			//rt.roundTrip();
 			sj.paymentwrapper("5421210500936745", "Anandh", "11", "28" ,"382");

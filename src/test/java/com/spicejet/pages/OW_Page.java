@@ -67,7 +67,6 @@ public class OW_Page extends SeWrappers{
 	public void clicksearchFlight() throws InterruptedException {
 		waitforelementExplicitwait(searchFlights, 15);
 		clickElement(searchFlights);
-		Thread.sleep(5000);
 	}
 
 	//////////////////////////////////////////////////////////
@@ -79,7 +78,6 @@ public class OW_Page extends SeWrappers{
 	public void clickcontinueButton() throws InterruptedException {
 		waitforelementExplicitwait(nxtpgcontinueButton, 5);
 		clickElement(nxtpgcontinueButton);
-		Thread.sleep(5000);
 	}
 
 	//////////////////////////////////////////////////////////

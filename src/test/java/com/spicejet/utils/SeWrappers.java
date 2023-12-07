@@ -39,18 +39,18 @@ import com.spicejet.utils.Reports;
 
 public class SeWrappers {
 
-	public static WebDriver driver = null;
-	static String browsername;
+	public static WebDriver driver ;
+	//static String browsername;
 
 	// 1.Launching Browser 
-	@BeforeClass
+	@BeforeMethod
 	@Parameters("browser")
 
-	public void setUp(String browser){
-		this.browsername = browser;
-	}
+//	public void setUp(String browser){
+//		this.browsername = browser;
+//	}
 
-	public void launchBrowser()
+	public void launchBrowser(String browsername)
 	{
 		try
 		{
@@ -791,26 +791,7 @@ public class SeWrappers {
 		}
 	}
 
-	// Method to clear the selected text in a WebElement
-    public void clearSelectedText(WebElement element) {
-        try {
-            // Create an instance of the Actions class
-            Actions actions = new Actions(driver);
-            // Click and hold on the element to select its text
-            actions.clickAndHold(element).perform();
-            // Release the mouse to clear the selected text
-            actions.release().perform();
-            // Report the success
-            Reports.reportStep("PASS", "Cleared selected text from WebElement " + element + " successfully");
-        } catch (Exception e) {
-            // Report the failure
-            Reports.reportStep("FAIL", "Unable to clear selected text from WebElement " + element);
-            System.out.println("Problem arose because of unable to clear selected text from the WebElement");
-            e.printStackTrace();
-        }
-    }
-
-	//54. Method for selecting text in a WebElement
+	//53. Method for selecting text in a WebElement
 	public void selectText(WebElement element) {
 	    try {       
 	        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
@@ -822,7 +803,7 @@ public class SeWrappers {
 	    }
 	}
 	
-	//55. Method for Delete the text
+	//54. Method for Delete the text
 	public void deleteText(WebElement element) {
 	    try {
 	        element.sendKeys(Keys.chord(Keys.CONTROL, "a")); // Select all text
@@ -834,6 +815,17 @@ public class SeWrappers {
 	        e.printStackTrace();
 	    }
 	}
+
+	//55. Method to switch to default content
+    public void switchToDefaultContent() {
+        try {
+            driver.switchTo().defaultContent();
+            Reports.reportStep("PASS", "Switch to Default Content is Successful");
+        } catch (Exception e) {
+            Reports.reportStep("FAIL", "Problem in Switching to Default Content");
+            e.printStackTrace();
+        }
+    }
 
 
 }

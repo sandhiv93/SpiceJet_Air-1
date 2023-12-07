@@ -19,7 +19,7 @@ public class SignUpTest_Positive extends SeWrappers{
 	public void signUpWithValidCredentials(){
 		try{
 			Reports.setTCDesc("SignUp of SpiceJet functionality with valid credentials");
-			launchBrowser();
+			//launchBrowser();
 			sj.signupwrapper(1, "Muruganandh", "Srinivasan", "29", "1996", "February", "9566259258", "devanandh2902@gmail.com", "Batman12@#", "Batman12@#", " ");
 		    Assert.assertFalse(false);
 		}

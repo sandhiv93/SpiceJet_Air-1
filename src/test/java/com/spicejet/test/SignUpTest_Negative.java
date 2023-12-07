@@ -18,7 +18,7 @@ public class SignUpTest_Negative extends SeWrappers{
 	public void signUpWithInValidCredentials(){
 		try{
 			Reports.setTCDesc("SignUp of SpiceJet functionality with Invalid credentials");
-			launchBrowser();
+			//launchBrowser();
 			sj.signupwrapper(1, "Anandh", "Srinivasan", "29", "1996", "February", "9876543210", "abc123@gmail.com", "Spicejet", "Spicejet", " ");
 			se.screenshot("NegativeTC_InValidName");
 			Assert.assertFalse(false);

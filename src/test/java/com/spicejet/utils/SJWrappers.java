@@ -139,12 +139,11 @@ public class SJWrappers extends SeWrappers{
 			OW_Page oneTrip= PageFactory.initElements(driver, OW_Page.class);
 			RT_Page roTrip= PageFactory.initElements(driver, RT_Page.class);
 			PayPage pay = PageFactory.initElements(driver, PayPage.class);
-			pay.entercardnumber(cardnum);
-			pay.entercardName(myname);
-			pay.entercardMonth(month);
-			pay.entercardYear(year);
-			pay.enterCVVNum(cvvnum);
-			takeScreenshot("Payment Done");
+			pay.clickandEntercardNumframe(cardnum);
+			pay.clickandEntercardNameframe(myname);
+			pay.clickandEntercardMonthframe(month);
+			pay.clickandEnterYearframe(year);
+			pay.clickandEnterCVVframe(cvvnum);
 			pay.clickPaybutton();
 		} 
 		catch (Exception e) {

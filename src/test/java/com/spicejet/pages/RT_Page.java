@@ -81,7 +81,6 @@ public class RT_Page extends SeWrappers{
 	public void clicksearchFlight() throws InterruptedException {
 		//waitforelementExplicitwait(searchFlights, 05);
 		clickElement(searchFlights);
-		Thread.sleep(5000);
 	}
 
 	//////////////////////////////////////////////////////////
@@ -93,7 +92,6 @@ public class RT_Page extends SeWrappers{
 	public void clickcontinueButton() throws InterruptedException {
 		waitforelementExplicitwait(nxtpgcontinueButton, 10);
 		clickElement(nxtpgcontinueButton);
-		Thread.sleep(5000);
 	}
 
 	//////////////////////////////////////////////////////////
@@ -113,7 +111,7 @@ public class RT_Page extends SeWrappers{
 		actionsDoubleclickElement(Fnameclear);
 		selectText(Fnameclear);
 		waitforelementFluentwait(Fnameclear, 10, 20);
-		clearSelectedText(Fnameclear);
+		deleteText(Fnameclear);
 	}
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[2]/div/div/div[2]/input")
 	public WebElement Fname;
@@ -129,7 +127,7 @@ public class RT_Page extends SeWrappers{
 		actionsDoubleclickElement(Lnameclear);
 		selectText(Lnameclear);
 		waitforelementFluentwait(Fnameclear, 10, 20);
-		clearSelectedText(Lnameclear);
+		deleteText(Lnameclear);
 	}
 
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[3]/div/div/div[2]/input")
@@ -146,7 +144,7 @@ public class RT_Page extends SeWrappers{
 		actionsDoubleclickElement(contactboxclear);
 		selectText(contactboxclear);
 		waitforelementFluentwait(contactboxclear, 10, 20);
-		clearSelectedText(contactboxclear);
+		deleteText(contactboxclear);
 	}
 	@FindBy(xpath = "//*[@data-testid='contact-number-input-box']")
 	public WebElement contactbox;
@@ -162,7 +160,7 @@ public class RT_Page extends SeWrappers{
 		actionsDoubleclickElement(mailidclear);
 		selectText(mailidclear);
 		waitforelementFluentwait(mailidclear, 10, 20);
-		clearSelectedText(mailidclear);
+		deleteText(mailidclear);
 	}
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[4]/div[1]/div/div/div[2]/input")
 	public WebElement mailid;
