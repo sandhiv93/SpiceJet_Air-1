@@ -18,7 +18,7 @@ public class ExtraTaskTest extends SeWrappers{
 	public void fieldsAvailableCheking(){
 		try{
 			Reports.setTCDesc("Fields Available of SpiceJet functionality ");
-			launchBrowser();
+			//launchBrowser();
 			sj.extrataskWrapper();
 		}
 		catch(Exception ex){
