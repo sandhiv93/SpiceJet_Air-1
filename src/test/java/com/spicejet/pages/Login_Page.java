@@ -66,16 +66,16 @@ public class Login_Page extends SeWrappers {
 
 	//////////////////////////////////////////////////////////
 	
-	//6. Verify Account Login successfull
-	@FindBy(xpath = "//div[normalize-space()='Hi Muruganandh']")
-	public WebElement Myname;
-	
-	public void getmyAllDetails(String title) {
-		getTextFromElement(Myname);
-		getTitle();
-		getCurrentUrl();
-		isURLReachable(title);
-	}
+//	//6. Verify Account Login successfull
+//	@FindBy(xpath = "//div[normalize-space()='Hi Muruganandh']")
+//	public WebElement Myname;
+//	
+//	public void getmyAllDetails(String title) {
+//		getTextFromElement(Myname);
+//		getTitle();
+//		getCurrentUrl();
+//		isURLReachable(title);
+//	}
 	
 
 }

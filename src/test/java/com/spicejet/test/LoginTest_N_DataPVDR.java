@@ -24,7 +24,7 @@ public class LoginTest_N_DataPVDR extends SeWrappers{
 	Reports repo = new Reports();
 
 	@DataProvider(name="XLData")
-	public Object[][] readsExcel() throws IOException {
+	public Object[][] readExcel() throws IOException {
 		Object[][] data = null;
 		XSSFWorkbook workbook = null;
 
@@ -43,7 +43,6 @@ public class LoginTest_N_DataPVDR extends SeWrappers{
 
 			for(int i=1; i<noOfRows;i++){
 				for(int j=0; j<noOfCells;j++){
-
 					XSSFCell cell = sheet.getRow(i).getCell(j);
 					String cellValue = dataFormatter.formatCellValue(cell);
 					data[i - 1][j] = cellValue;
@@ -59,12 +58,14 @@ public class LoginTest_N_DataPVDR extends SeWrappers{
 		return data;
 	}
 
+	//
+	
 	@Test(dataProvider="XLData")
-	public void loginWithInValidCredentials(String Emailid, String password, String BrokenURL){
+	public void loginWithInValidCredentials(String Emailid, String password){
 		try{
 			Reports.setTCDesc("Negative tc for SpiceJet LoginPage functionality with Invalid credentials");
 			//se.launchBrowser();
-			sj.loginwrapper(Emailid, password, BrokenURL);
+			sj.loginwrapper(Emailid, password);
 			se.screenshot("LoginTest_N_DataPVDR");		
 			Assert.assertFalse(false);
 		}

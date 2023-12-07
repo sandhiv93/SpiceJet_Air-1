@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.spicejet.test.LoginTest_P_DataPVDR">
+      <class name="com.spicejet.test.LoginTest_N_DataPVDR">
         <methods>
           <include name="launchBrowser"/>
-          <include name="loginWithValidCredentials"/>
+          <include name="closeBrowser"/>
+          <include name="loginWithInValidCredentials"/>
         </methods>
-      </class> <!-- com.spicejet.test.LoginTest_P_DataPVDR -->
+      </class> <!-- com.spicejet.test.LoginTest_N_DataPVDR -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

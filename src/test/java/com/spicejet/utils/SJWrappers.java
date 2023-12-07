@@ -42,15 +42,16 @@ public class SJWrappers extends SeWrappers{
 	//////////////////////////////////////////////////////////
 
 	//Login Page Methods
-	public void loginwrapper(String myemaild, String mypassowrd, String URLbroken) {
+	public void loginwrapper(String myemaild, String mypassowrd) {
 		try {
 			Login_Page loginPage = PageFactory.initElements(driver, Login_Page.class);
+			launchBrowser("https://www.spicejet.com/");
 			loginPage.clickloginMainpage();
 			loginPage.clickEmailRadioButton();
 			loginPage.enteremailid(myemaild);
 			loginPage.enterpassword(mypassowrd);
 			loginPage.clickLoginMyacc();
-			loginPage.getmyAllDetails(URLbroken);
+			//loginPage.getmyAllDetails(URLbroken);
 			screenshot("LoginPage");
 		} 
 		catch (Exception e) {

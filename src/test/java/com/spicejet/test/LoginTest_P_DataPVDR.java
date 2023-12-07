@@ -23,7 +23,7 @@ public class LoginTest_P_DataPVDR extends SeWrappers{
 	Reports repo = new Reports();
 
 	@DataProvider(name="XLData")
-	public Object[][] readsExcel() throws IOException {
+	public Object[][] readExcel() throws IOException {
 		Object[][] data=null;
 		XSSFWorkbook workbook=null;
 		DataFormatter dataFormatter = new DataFormatter();
@@ -57,11 +57,11 @@ public class LoginTest_P_DataPVDR extends SeWrappers{
 	}
 	
 	@Test(dataProvider="XLData",priority=2)
-	public void loginWithValidCredentials(String Emailid,String Password, String BrokenURL) {
+	public void loginWithValidCredentials(String Emailid,String Password) {
 		try {
 			Reports.setTCDesc("SpiceJet LoginPage functionality with valid credentials");
 			//launchBrowser();
-			sj.loginwrapper(Emailid, Password, BrokenURL);
+			sj.loginwrapper(Emailid, Password);
 			sj.screenshot("Positive_Login_DataPVDR");
 			Assert.assertFalse(false);
 		} 
