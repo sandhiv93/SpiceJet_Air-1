@@ -821,6 +821,20 @@ public class SeWrappers {
 	        e.printStackTrace();
 	    }
 	}
+	
+	//55. Method for Delete the text
+	public void deleteText(WebElement element) {
+	    try {
+	        element.sendKeys(Keys.chord(Keys.CONTROL, "a")); // Select all text
+	        element.sendKeys(Keys.BACK_SPACE); // Delete the selected text
+	        Reports.reportStep("PASS", "Deleted text in WebElement " + element + " successfully");
+	    } catch (Exception e) {
+	        Reports.reportStep("FAIL", "Unable to delete text in WebElement " + element);
+	        System.out.println("Problem arose because of unable to delete text in the WebElement");
+	        e.printStackTrace();
+	    }
+	}
+
 
 }
 

@@ -12,9 +12,9 @@ public class PayPage extends SeWrappers{
 	//1. Click card and enter number
 	@FindBy(xpath="//iframe[@class='card_number_iframe']")
 	public WebElement FrameCard;
-	public void clickintocardNumframe() {
+	public void clickintocardNumframe(int num) {
 		waitforelementExplicitwait(FrameCard, 10);
-		frameByWebElement(FrameCard);
+		frameByindex(0);
 	}
 
 	@FindBy(xpath="//input[@id='card_number']")
@@ -28,9 +28,9 @@ public class PayPage extends SeWrappers{
 	//2. Enter card name
 	@FindBy(xpath="//*[@class='name_on_card_iframe']")
 	public WebElement frameName;
-	public void clickintocardNameframe() {
+	public void clickintocardNameframe(int num) {
 		waitforelementExplicitwait(frameName, 10);
-		frameByWebElement(frameName);
+		frameByindex(1);
 	}
 	@FindBy(xpath="//*[@placeholder='Cardholder Name']")
 	public WebElement cardname;
@@ -43,9 +43,9 @@ public class PayPage extends SeWrappers{
 	//3. Enter card Month name
 	@FindBy(xpath="//*[@class='card_exp_month_iframe']")
 	public WebElement frameMonth;
-	public void clickintocardMonthframe() {
+	public void clickintocardMonthframe(int num) {
 		waitforelementExplicitwait(frameMonth, 10);
-		frameByWebElement(frameMonth);
+		frameByindex(2);
 	}
 	@FindBy(xpath="//*[@placeholder='MM']")
 	public WebElement expmonth;
@@ -60,9 +60,9 @@ public class PayPage extends SeWrappers{
 	@FindBy(xpath="//*[@class='card_exp_year_iframe']")
 	public WebElement frameYear;
 
-	public void clickintoYearframe() {
+	public void clickintoYearframe(int num) {
 		waitforelementExplicitwait(frameYear, 10);
-		frameByWebElement(frameYear);
+		frameByindex(3);
 	}
 	@FindBy(xpath="//*[@placeholder='YY']")
 	public WebElement expYear;
@@ -77,9 +77,9 @@ public class PayPage extends SeWrappers{
 	@FindBy(xpath="//*[@class='security_code_iframe']")
 	public WebElement frameCVV;
 
-	public void clickintoCVVframe() {
+	public void clickintoCVVframe(int num) {
 		waitforelementExplicitwait(frameCVV, 10);
-		frameByWebElement(frameCVV);
+		frameByindex(4);
 	}
 	@FindBy(xpath="//*[@placeholder='123']")
 	public WebElement cvvNum;

@@ -16,7 +16,7 @@ public class extraTaskPage extends SeWrappers{
 	
 	@FindBy(xpath="//*[@data-testid='flight status-horizontal-nav-tabs']")
 	public WebElement flightStatus;
-	public void clickflightstatus() {
+	public void clickflightstatus(){
 		clickElement(flightStatus);
 	}
 

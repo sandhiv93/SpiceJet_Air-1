@@ -1,5 +1,6 @@
 package com.spicejet.test;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import com.spicejet.utils.Reports;
 import com.spicejet.utils.SJWrappers;
@@ -28,6 +29,7 @@ public class OWTest extends SeWrappers {
 		}
 	}
 	
+	@AfterTest
 	public void closeBrowser(){
 		try{
 			driver.close();

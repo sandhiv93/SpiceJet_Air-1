@@ -14,17 +14,17 @@ public class PayTest extends SeWrappers {
 	Reports repo = new Reports();
 	LoginTest_P_DataPVDR loginpass = new LoginTest_P_DataPVDR();
 	OWTest ow = new OWTest();
-//	RTTest rt = new RTTest();
+	RTTest rt = new RTTest();
 	
 	@Test(priority=5)
 	public void payTest(){
 		try{
 			Reports.setTCDesc("Validating PaymentPage of SpiceJet functionality with dummy credentials");
-			//launchBrowser();
+			launchBrowser();
 			ow.oneWayTrip();
-//			rt.roundTrip();
+			//rt.roundTrip();
 			sj.paymentwrapper("5421210500936745", "Anandh", "11", "28" ,"382");
-			se.screenshot("Payment");
+			se.screenshot("Payment Done");
 			}
 		catch (Exception e) {
 			e.printStackTrace();

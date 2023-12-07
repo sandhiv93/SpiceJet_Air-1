@@ -9,7 +9,7 @@
       <class name="com.spicejet.utils.Reports"/>
       <!--<class name="com.spicejet.test.SignUpTest_Positive"/>-->
       <class name="com.spicejet.test.LoginTest_P_DataPVDR"/>
-      <!--<class name="com.spicejet.test.OWTest"/>-->
+      <class name="com.spicejet.test.OWTest"/>
       <!--<class name="com.spicejet.test.RTTest"/>-->
       <!--<class name="com.spicejet.test.PayTest"/>-->
     </classes>

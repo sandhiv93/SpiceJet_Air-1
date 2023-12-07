@@ -96,18 +96,14 @@ public class OW_Page extends SeWrappers{
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[2]/div/div/div[2]/input")
 	public WebElement Fnameclear;
 	public void clearFirstname() {
-//		actionsDoubleclickElement(Fnameclear);
-//		selectText(Fnameclear);
-//		waitforelementFluentwait(Fnameclear, 10, 20);
-//		clearSelectedText(Fnameclear);
+		actionsDoubleclickElement(Fnameclear);
+		selectText(Fnameclear);
+		waitforelementFluentwait(Fnameclear, 10, 20);
+		deleteText(Fnameclear);
 	}
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[2]/div/div/div[2]/input")
 	public WebElement Fname;
 	public void enterFname(String fname) throws InterruptedException {
-		actionsDoubleclickElement(Fnameclear);
-		selectText(Fnameclear);
-		waitforelementFluentwait(Fnameclear, 10, 20);
-		clearSelectedText(Fnameclear);
 		clickElement(Fname);
 		waitforelementExplicitwait(Fname, 20);
 		typeText(Fname, fname);
@@ -116,19 +112,15 @@ public class OW_Page extends SeWrappers{
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[3]/div/div/div[2]/input")
 	public WebElement Lnameclear;
 	public void clearLastname() {
-//		actionsDoubleclickElement(Lnameclear);
-//		selectText(Lnameclear);
-//		waitforelementFluentwait(Lnameclear, 10, 20);
-//		clearSelectedText(Lnameclear);
+		actionsDoubleclickElement(Lnameclear);
+		selectText(Lnameclear);
+		waitforelementFluentwait(Lnameclear, 10, 20);
+		deleteText(Lnameclear);
 	}
 	
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[3]/div/div/div[2]/input")
 	public WebElement Lname;
 	public void enterLname(String lname) throws InterruptedException {
-		actionsDoubleclickElement(Lnameclear);
-		selectText(Lnameclear);
-		waitforelementFluentwait(Lnameclear, 10, 20);
-		clearSelectedText(Lnameclear);
 		clickElement(Lname);
 		waitforelementExplicitwait(Lname, 20);
 		typeText(Lname, lname);
@@ -137,18 +129,14 @@ public class OW_Page extends SeWrappers{
 	@FindBy(xpath = "//*[@data-testid='contact-number-input-box']")
 	public WebElement contactboxclear;
 	public void clearcontactBox() {
-//		actionsDoubleclickElement(contactboxclear);
-//		selectText(contactboxclear);
-//		waitforelementFluentwait(contactboxclear, 10, 20);
-//		clearSelectedText(contactboxclear);
+		actionsDoubleclickElement(contactboxclear);
+		selectText(contactboxclear);
+		waitforelementFluentwait(contactboxclear, 10, 20);
+		deleteText(contactboxclear);
 	}
 	@FindBy(xpath = "//*[@data-testid='contact-number-input-box']")
 	public WebElement contactbox;
 	public void entercontactNumber(String number) throws InterruptedException {
-		actionsDoubleclickElement(contactboxclear);
-		selectText(contactboxclear);
-		waitforelementFluentwait(contactboxclear, 10, 20);
-		clearSelectedText(contactboxclear);
 		clickElement(contactbox);
 		waitforelementExplicitwait(contactbox, 20);
 		typeText(contactbox, number);
@@ -157,18 +145,14 @@ public class OW_Page extends SeWrappers{
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[4]/div[1]/div/div/div[2]/input")
 	public WebElement mailidclear;
 	public void clearmailid() {
-//		actionsDoubleclickElement(mailidclear);
-//		selectText(mailidclear);
-//		waitforelementFluentwait(mailidclear, 10, 20);
-//		clearSelectedText(mailidclear);
+		actionsDoubleclickElement(mailidclear);
+		selectText(mailidclear);
+		waitforelementFluentwait(mailidclear, 10, 20);
+		deleteText(mailidclear);
 	}
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[4]/div[1]/div/div/div[2]/input")
 	public WebElement mailid;
 	public void enteremailid(String email) throws InterruptedException {
-		actionsDoubleclickElement(mailidclear);
-		selectText(mailidclear);
-		waitforelementFluentwait(mailidclear, 10, 20);
-		clearSelectedText(mailidclear);
 		clickElement(mailid);
 		waitforelementExplicitwait(mailid, 20);
 		typeText(mailid , email);

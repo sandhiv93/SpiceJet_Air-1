@@ -81,7 +81,7 @@ public class SJWrappers extends SeWrappers{
 			oneTrip.clearcontactBox();
 			oneTrip.entercontactNumber(number);
 			oneTrip.clearmailid();
-			//oneTrip.enteremailid(email);
+			oneTrip.enteremailid(email);
 			oneTrip.entertownName(city);
 			oneTrip.clickcheckBox();
 			oneTrip.clickContinue();
@@ -144,6 +144,8 @@ public class SJWrappers extends SeWrappers{
 			pay.entercardMonth(month);
 			pay.entercardYear(year);
 			pay.enterCVVNum(cvvnum);
+			takeScreenshot("Payment Done");
+			pay.clickPaybutton();
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
