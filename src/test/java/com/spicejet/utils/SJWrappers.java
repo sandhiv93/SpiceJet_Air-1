@@ -157,11 +157,14 @@ public class SJWrappers extends SeWrappers{
 			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
 			extraTaskPage ETPage= PageFactory.initElements(driver, extraTaskPage.class);
 			ETPage.clickcheckInn();
-			ETPage.clickflightstatus();
-			ETPage.clickmanageBook();
 			screenshot("CheckInn");
+			Thread.sleep(2000);
+			ETPage.clickflightstatus();
 			screenshot("FlightStatus");
+			Thread.sleep(2000);
+			ETPage.clickmanageBook();			
 			screenshot("ManageBooking");
+			Thread.sleep(3000);
 		}
 		catch(Exception ex){
 			ex.printStackTrace();

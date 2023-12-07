@@ -8,10 +8,11 @@
       <class name="com.spicejet.utils.SJWrappers"/>
       <class name="com.spicejet.utils.Reports"/>
       <!--<class name="com.spicejet.test.SignUpTest_Positive"/>-->
-      <class name="com.spicejet.test.LoginTest_P_DataPVDR"/>
-      <class name="com.spicejet.test.OWTest"/>
+      <!--<class name="com.spicejet.test.LoginTest_P_DataPVDR"/>-->
+      <!--<class name="com.spicejet.test.OWTest"/>-->
       <!--<class name="com.spicejet.test.RTTest"/>-->
       <!--<class name="com.spicejet.test.PayTest"/>-->
+      <class name="com.spicejet.test.ExtraTaskTest"/>
     </classes>
   </test> <!-- Test -->
   <test name="Negative Test cases">

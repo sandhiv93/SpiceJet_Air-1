@@ -5,8 +5,8 @@
     <classes>
       <class name="com.spicejet.test.LoginTest_P_DataPVDR">
         <methods>
+          <include name="launchBrowser"/>
           <include name="loginWithValidCredentials"/>
-          <include name="setUp"/>
         </methods>
       </class> <!-- com.spicejet.test.LoginTest_P_DataPVDR -->
     </classes>

@@ -10,6 +10,7 @@ public class extraTaskPage extends SeWrappers{
 	public WebElement checkIn;
 	public void clickcheckInn() {
 		clickElement(checkIn);
+		
 	}
 
 	////////////////////////////////

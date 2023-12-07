@@ -4,12 +4,13 @@
   <test thread-count="5" name="Positive Test Cases(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="com.spicejet.test.OWTest">
+      <class name="com.spicejet.test.ExtraTaskTest">
         <methods>
-          <include name="oneWayTrip"/>
-          <include name="setUp"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="fieldsAvailableCheking"/>
         </methods>
-      </class> <!-- com.spicejet.test.OWTest -->
+      </class> <!-- com.spicejet.test.ExtraTaskTest -->
     </classes>
   </test> <!-- Positive Test Cases(failed) -->
 </suite> <!-- Failed suite [Suite] -->

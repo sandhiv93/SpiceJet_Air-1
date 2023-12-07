@@ -22,51 +22,51 @@ public class LoginTest_N_DataPVDR extends SeWrappers{
 	SeWrappers se=new SeWrappers();
 	SJWrappers sj = new SJWrappers();
 	Reports repo = new Reports();
-//	@DataProvider(name="fetchData")
-//	public Object[][] readsExcel() throws IOException {
-//		Object[][] data=null;
-//		XSSFWorkbook workbook=null;
-//
-//		DataFormatter dataFormatter = new DataFormatter();
-//		try{
-//			workbook= new XSSFWorkbook(new FileInputStream("D:\\EclipseIDE\\pj1_framework\\ReadFileForLogin.xlsx"));
-//			XSSFSheet sheet= workbook.getSheet("LoginInValid");
-//			XSSFRow row= sheet.getRow(0);
-//
-//			int noOfRows=sheet.getPhysicalNumberOfRows();
-//
-//			int noOfCells= row.getPhysicalNumberOfCells();
-//
-//			data= new Object[noOfRows-1][noOfCells]; 
-//
-//			for(int i=1; i<noOfRows;i++){
-//				for(int j=0; j<noOfCells;j++){
-//
-//					XSSFCell cell = sheet.getRow(i).getCell(j);
-//					String cellValue = dataFormatter.formatCellValue(cell);
-//					data[i - 1][j] = cellValue;
-//				}
-//			}
-//		}
-//		catch(Exception ex){
-//			ex.printStackTrace();
-//		}
-//		finally{
-//			workbook.close();
-//		}
-//		return data;
-//	}
-	
-	//@Test(dataProvider="fetchData")
-	
-	@Test
-	public void loginWithInValidCredentials(){
+
+	@DataProvider(name="XLData")
+	public Object[][] readsExcel() throws IOException {
+		Object[][] data = null;
+		XSSFWorkbook workbook = null;
+
+		DataFormatter dataFormatter = new DataFormatter();
+
+		try{	
+			workbook= new XSSFWorkbook(new FileInputStream("D:\\EclipseIDE\\pj1_framework\\FileLogin.xlsx"));
+			XSSFSheet sheet= workbook.getSheet("LoginInValid");
+			XSSFRow row= sheet.getRow(0);
+
+			int noOfRows=sheet.getPhysicalNumberOfRows();
+
+			int noOfCells= row.getPhysicalNumberOfCells();
+
+			data= new Object[noOfRows-1][noOfCells]; 
+
+			for(int i=1; i<noOfRows;i++){
+				for(int j=0; j<noOfCells;j++){
+
+					XSSFCell cell = sheet.getRow(i).getCell(j);
+					String cellValue = dataFormatter.formatCellValue(cell);
+					data[i - 1][j] = cellValue;
+				}
+			}
+		}
+		catch(Exception ex){
+			ex.printStackTrace();
+		}
+		finally{
+			workbook.close();
+		}
+		return data;
+	}
+
+	@Test(dataProvider="XLData")
+	public void loginWithInValidCredentials(String Emailid, String password, String BrokenURL){
 		try{
 			Reports.setTCDesc("Negative tc for SpiceJet LoginPage functionality with Invalid credentials");
 			//se.launchBrowser();
-			sj.loginwrapper("abc123@gmail.com", "123456", " ");
+			sj.loginwrapper(Emailid, password, BrokenURL);
 			se.screenshot("LoginTest_N_DataPVDR");		
-		     Assert.assertFalse(false);
+			Assert.assertFalse(false);
 		}
 		catch(Exception ex){
 			ex.printStackTrace();
@@ -74,7 +74,7 @@ public class LoginTest_N_DataPVDR extends SeWrappers{
 			Reports.reportStep("FAIL", "Problem while Login");
 		}
 	}
-	
+
 	@AfterMethod
 	public void closeBrowser(){
 		try{
