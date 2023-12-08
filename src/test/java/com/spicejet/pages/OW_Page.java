@@ -23,7 +23,7 @@ public class OW_Page extends SeWrappers{
 	public WebElement from;
 
 	public void enterFromPlace(String place1) {
-		waitforelementExplicitwait(from, 15);
+		//waitforelementExplicitwait(from, 15);
 		clickElement(from);
 		typeText(from, place1);
 	}
@@ -86,8 +86,9 @@ public class OW_Page extends SeWrappers{
 	@FindBy(xpath = "(//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep'])[1]")
 	public WebElement title;
 	public void clicktitle(int value) {
-		waitforelementExplicitwait(title, 20);
+		//waitforelementExplicitwait(title, 20);
 		setImplicitWait(15);
+		clickElement(title);
 		selectByindexDropDown(title, value);
 	}
 	

@@ -24,7 +24,7 @@ public class SignUp_Page extends SeWrappers{
 	public WebElement title;
 
 	public void clicktitle(int num) {
-		waitforelementExplicitwait(title, 20);
+		//waitforelementExplicitwait(title, 20);
 		windowhandleParentWindow();
 		clickElement(title);
 		selectByindexDropDown(title, num);

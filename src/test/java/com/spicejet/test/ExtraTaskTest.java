@@ -1,5 +1,6 @@
 package com.spicejet.test;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
@@ -28,7 +29,7 @@ public class ExtraTaskTest extends SeWrappers{
 		}
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public void closeBrowser(){
 		try{
 			driver.close();
