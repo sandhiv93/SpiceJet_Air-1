@@ -12,7 +12,7 @@ public class SignUp_Page extends SeWrappers{
 	public WebElement signupbutton;
 
 	public void clicksignup() {
-		setImplicitWait(25);
+		setImplicitWait(10);
 		clickElement(signupbutton);
 	}
 
@@ -38,7 +38,7 @@ public class SignUp_Page extends SeWrappers{
 	public WebElement Fname;
 
 	public void enterFirstname(String Name) {
-		waitforelementExplicitwait(Fname, 10);
+		//waitforelementExplicitwait(Fname, 10);
 		typeText(Fname, Name);
 	}
 	//////////////////////////////////////////////////////////
@@ -48,7 +48,7 @@ public class SignUp_Page extends SeWrappers{
 	public WebElement Lname;
 
 	public void enterLastname(String LastName) {
-		waitforelementExplicitwait(Lname, 10);
+		//waitforelementExplicitwait(Lname, 10);
 		typeText(Lname, LastName);
 	}	
 
@@ -117,7 +117,7 @@ public class SignUp_Page extends SeWrappers{
 	public WebElement termsandCoButton;
 
 	public void clicktermsandCo() {
-		waitforelementExplicitwait(termsandCoButton, 10);
+		//waitforelementExplicitwait(termsandCoButton, 10);
 		clickElement(termsandCoButton);
 	}
 

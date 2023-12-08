@@ -22,7 +22,7 @@ public class Login_Page extends SeWrappers {
 	public WebElement radioemailid;
 
 	public void clickEmailRadioButton() {
-		waitforelementExplicitwait(radioemailid, 10);
+		//waitforelementExplicitwait(radioemailid, 10);
 		windowhandleParentWindow();
 		clickElement(radioemailid);
 	}

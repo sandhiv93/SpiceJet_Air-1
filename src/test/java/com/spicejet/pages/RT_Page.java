@@ -100,7 +100,7 @@ public class RT_Page extends SeWrappers{
 	@FindBy(xpath = "(//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep'])[1]")
 	public WebElement title;
 	public void clicktitle(int value) {
-		waitforelementExplicitwait(title, 20);
+		//waitforelementExplicitwait(title, 20);
 		setImplicitWait(15);
 		selectByindexDropDown(title, value);
 	}
