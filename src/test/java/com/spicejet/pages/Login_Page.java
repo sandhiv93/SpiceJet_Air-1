@@ -48,7 +48,7 @@ public class Login_Page extends SeWrappers {
 
 	public void enterpassword(String mypwd) {
 		clickElement(mypasswd);
-		waitforelementExplicitwait(emailid, 20);
+		waitforelementExplicitwait(mypasswd, 20);
 		clicksleepElement(mypasswd);
 		typeText(mypasswd, mypwd);
 	}
@@ -65,17 +65,6 @@ public class Login_Page extends SeWrappers {
 	}
 
 	//////////////////////////////////////////////////////////
-	
-//	//6. Verify Account Login successfull
-//	@FindBy(xpath = "//div[normalize-space()='Hi Muruganandh']")
-//	public WebElement Myname;
-//	
-//	public void getmyAllDetails(String title) {
-//		getTextFromElement(Myname);
-//		getTitle();
-//		getCurrentUrl();
-//		isURLReachable(title);
-//	}
 	
 
 }

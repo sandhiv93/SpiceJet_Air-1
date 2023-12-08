@@ -13,7 +13,7 @@ import com.spicejet.pages.extraTaskPage;
 public class SJWrappers extends SeWrappers{
 
 	//SignUp page methods
-	public void signupwrapper(int num, String Fname, String Lname, String date, String month, String year, String mobilenum, String emailid,
+	public void signupwrapper(int num, String Fname, String Lname, String date, String mobilenum, String emailid, 
 			String newpwd, String Copwd, String URLbroken) {
 		try {
 			SignUp_Page signupPage = PageFactory.initElements(driver, SignUp_Page.class);
@@ -21,18 +21,15 @@ public class SJWrappers extends SeWrappers{
 			signupPage.clicktitle(num);
 			signupPage.enterFirstname(Fname);
 			signupPage.enterLastname(Lname);
-			signupPage.clickCalendar();
-			signupPage.enterDate(date);
-			signupPage.enterYear(year);
-			signupPage.enterMonth(month);
+			signupPage.enterDOBCalendar(date);
 			signupPage.enterMobilenum(mobilenum);
 			signupPage.enterEmailId(emailid);
 			signupPage.enternewPassword(newpwd);
 			signupPage.enterconfirmPassword(Copwd);
 			signupPage.clicktermsandCo();
-			signupPage.clicksubmitSignup();
-			signupPage.getmyAllDetails(URLbroken);
 			screenshot("SignUpPage_SpiceJet");
+			signupPage.clicksubmitSignup();			
+			signupPage.getmyAllDetails(URLbroken);
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
@@ -50,9 +47,8 @@ public class SJWrappers extends SeWrappers{
 			loginPage.clickEmailRadioButton();
 			loginPage.enteremailid(myemaild);
 			loginPage.enterpassword(mypassowrd);
-			loginPage.clickLoginMyacc();
-			//loginPage.getmyAllDetails(URLbroken);
 			screenshot("LoginPage");
+			loginPage.clickLoginMyacc();
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
@@ -65,7 +61,7 @@ public class SJWrappers extends SeWrappers{
 	public void oneWaywrapper(String place1, String place2, int value, String fname, String lname,
 			String number, String email, String city) {
 		try{
-			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
+			//Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
 			OW_Page oneTrip= PageFactory.initElements(driver, OW_Page.class);
 			oneTrip.clickonewaybutton();
 			oneTrip.enterFromPlace(place1);
@@ -102,7 +98,7 @@ public class SJWrappers extends SeWrappers{
 	public void roundTripwrapper(String place1, String place2, int value, String fname, String lname,
 			String number, String email, String city) {
 		try{
-			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
+			//Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
 			RT_Page roTrip= PageFactory.initElements(driver, RT_Page.class);
 			roTrip.clickRoundTripbutton();
 			roTrip.enterFromPlace(place1);
@@ -136,9 +132,9 @@ public class SJWrappers extends SeWrappers{
 	//Dummy Payment Data
 	public void paymentwrapper(String cardnum, String myname, String month, String year, String cvvnum) {
 		try {
-			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
-			OW_Page oneTrip= PageFactory.initElements(driver, OW_Page.class);
-			RT_Page roTrip= PageFactory.initElements(driver, RT_Page.class);
+			//Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
+			//OW_Page oneTrip= PageFactory.initElements(driver, OW_Page.class);
+			//RT_Page roTrip= PageFactory.initElements(driver, RT_Page.class);
 			PayPage pay = PageFactory.initElements(driver, PayPage.class);
 			pay.clickandEntercardNumframe(cardnum);
 			pay.clickandEntercardNameframe(myname);
@@ -155,7 +151,7 @@ public class SJWrappers extends SeWrappers{
 	//Extra Tasks
 	public void extrataskWrapper(){
 		try{
-			Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
+			//Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
 			extraTaskPage ETPage= PageFactory.initElements(driver, extraTaskPage.class);
 			ETPage.clickcheckInn();
 			screenshot("CheckInn");

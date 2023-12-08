@@ -54,42 +54,21 @@ public class SignUp_Page extends SeWrappers{
 
 	//////////////////////////////////////////////////////////
 
-	//5. Click DOB calendar 
+	//5. Enter DOB calendar 
 
-	@FindBy(xpath="//*[@id='dobDate']")
-	public WebElement calenderClick;
+	@FindBy(xpath="//input[@id='dobDate']")
+	public WebElement DOB;
 
-	public void clickCalendar() {
-		waitforelementExplicitwait(calenderClick, 20);
-		clickElement(calenderClick);
-	}
-
-	@FindBy(xpath="//div[@aria-label='Choose Thursday, February 29th, 1996']")
-	public WebElement dateClick;
-
-	public void enterDate(String date) {
-		waitforelementExplicitwait(dateClick, 10);
-		typeText(dateClick, date);
-	}
-	@FindBy(xpath="//*[@class='react-datepicker__month-select']")
-	public WebElement MonthClick;
-
-	public void enterMonth(String month) {
-		waitforelementExplicitwait(MonthClick, 10);
-		typeText(MonthClick, month);
-	}
-	@FindBy(xpath="//*[@class='react-datepicker__year-select']")
-	public WebElement YearClick;
-
-	public void enterYear(String year) {
-		waitforelementExplicitwait(YearClick, 10);
-		typeText(MonthClick, year);
+	public void enterDOBCalendar(String birthdate) {
+		waitforelementExplicitwait(DOB, 10);
+		clickElement(DOB);
+		typeText(DOB, birthdate);
 	}
 
 	//////////////////////////////////////////////////////////
 
 	//6. Enter Mobile Number
-	@FindBy(xpath = "//input[@placeholder='+91 01234 56789']")
+	@FindBy(xpath = "(//label[text()='Mobile Number']/following::input)[1]")
 	public WebElement mobilenum;
 
 	public void enterMobilenum(String number) {
@@ -100,11 +79,12 @@ public class SignUp_Page extends SeWrappers{
 	//////////////////////////////////////////////////////////
 
 	//7. Enter emailid
-	@FindBy(xpath = "//input[@id='email_id']")
+	@FindBy(xpath = "(//label[text()='Email ID']/following::input)[1]")
 	public WebElement emailid;
 
 	public void enterEmailId(String email) {
-		waitforelementExplicitwait(emailid, 10);
+		waitforelementExplicitwait(emailid, 25);
+		clickElement(emailid);
 		typeText(emailid, email);
 	}
 

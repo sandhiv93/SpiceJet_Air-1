@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import com.spicejet.utils.SeWrappers;
 
 public class extraTaskPage extends SeWrappers{
+	
+	
 	@FindBy(xpath="//*[@data-testid='check-in-horizontal-nav-tabs']")
 	public WebElement checkIn;
 	public void clickcheckInn() {
