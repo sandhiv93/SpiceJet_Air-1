@@ -58,7 +58,7 @@ public class SJWrappers extends SeWrappers{
 	//////////////////////////////////////////////////////////
 
 	//OneWay trip
-	public void oneWaywrapper(String place1, String place2, int value, String fname, String lname,
+	public void oneWaywrapper(String place1, String place2, String value, String fname, String lname,
 			String number, String email, String city) {
 		try{
 			//Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);
@@ -95,7 +95,7 @@ public class SJWrappers extends SeWrappers{
 	//////////////////////////////////////////////////////////
 
 	//Round Trip Method
-	public void roundTripwrapper(String place1, String place2, int value, String fname, String lname,
+	public void roundTripwrapper(String place1, String place2, String value, String fname, String lname,
 			String number, String email, String city) {
 		try{
 			//Login_Page login_Page = PageFactory.initElements(driver, Login_Page.class);

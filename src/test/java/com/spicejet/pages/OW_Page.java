@@ -85,11 +85,9 @@ public class OW_Page extends SeWrappers{
 	//7. Next page Enter personal details
 	@FindBy(xpath = "(//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep'])[1]")
 	public WebElement title;
-	public void clicktitle(int value) {
-		//waitforelementExplicitwait(title, 20);
-		setImplicitWait(15);
+	public void clicktitle(String value) {
 		clickElement(title);
-		selectByindexDropDown(title, value);
+		selectByValueDropDown(title, value);
 	}
 	
 	@FindBy(xpath = "//*[@id=\"primary-contact-details\"]/div[3]/div[2]/div/div/div[2]/input")
@@ -186,7 +184,7 @@ public class OW_Page extends SeWrappers{
 	//////////////////////////////////////////////////////////
 
 	//9.Click again continue button in next Main page
-	@FindBy(xpath = "/html/body/div[3]/div/div/div[5]/div/div/div[2]/div/div/div[4]")
+	@FindBy(xpath = "//body/div[@id='react-root']/div[@id='main-container']/div[1]/div[5]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]")
 	public WebElement main2Continuebutton;
 
 	public void clickContinue2() throws InterruptedException {

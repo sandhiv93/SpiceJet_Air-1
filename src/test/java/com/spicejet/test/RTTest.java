@@ -20,7 +20,7 @@ public class RTTest extends SeWrappers {
 		try {
 			Reports.setTCDesc("OneWayTrip With Passenger Details of SpiceJet functionality");
 			//launchBrowser();
-			sj.roundTripwrapper("che", "mum", 0, "Muruganandh", "Srinivasan", "9566259258", "devanandh2902@gmail.com", "Chennai");
+			sj.roundTripwrapper("che", "mum", "Mr", "Muruganandh", "Srinivasan", "9566259258", "devanandh2902@gmail.com", "Chennai");
 		} 
 		catch(Exception ex){
 			ex.printStackTrace();

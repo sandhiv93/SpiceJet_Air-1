@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-08T12:50:22 IST" name="Suite" finished-at="2023-12-08T12:52:14 IST" duration-ms="111540">
+  <suite started-at="2023-12-12T11:59:36 IST" name="Suite" finished-at="2023-12-12T12:01:41 IST" duration-ms="124996">
     <groups>
     </groups>
-    <test started-at="2023-12-08T12:50:22 IST" name="Positive Test Cases" finished-at="2023-12-08T12:52:14 IST" duration-ms="111484">
-      <class name="com.spicejet.test.SignUpTest_Positive">
-        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:com.spicejet.test.SignUpTest_Positive@183ec003]" started-at="2023-12-08T12:50:22 IST" name="launchBrowser" finished-at="2023-12-08T12:50:36 IST" duration-ms="13709" status="PASS">
+    <test started-at="2023-12-12T11:59:36 IST" name="Positive Test Cases" finished-at="2023-12-12T12:01:41 IST" duration-ms="124873">
+      <class name="com.spicejet.test.LoginTest_P_DataPVDR">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:com.spicejet.test.LoginTest_P_DataPVDR@303cf2ba]" started-at="2023-12-12T11:59:38 IST" name="launchBrowser" finished-at="2023-12-12T11:59:43 IST" duration-ms="4652" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,23 +18,52 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="signUpWithValidCredentials()[pri:1, instance:com.spicejet.test.SignUpTest_Positive@183ec003]" started-at="2023-12-08T12:50:36 IST" name="signUpWithValidCredentials" finished-at="2023-12-08T12:52:13 IST" duration-ms="97191" status="PASS">
+        <test-method signature="loginWithValidCredentials(java.lang.String,java.lang.String)[pri:2, instance:com.spicejet.test.LoginTest_P_DataPVDR@303cf2ba]" started-at="2023-12-12T11:59:43 IST" name="loginWithValidCredentials" data-provider="XLData" finished-at="2023-12-12T12:00:21 IST" duration-ms="38618" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[devanandh2902@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Batman12@#]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signUpWithValidCredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.SignUpTest_Positive@183ec003]" started-at="2023-12-08T12:52:13 IST" name="closeBrowser" finished-at="2023-12-08T12:52:14 IST" duration-ms="482" status="PASS">
+        </test-method> <!-- loginWithValidCredentials -->
+      </class> <!-- com.spicejet.test.LoginTest_P_DataPVDR -->
+      <class name="com.spicejet.test.OWTest">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:com.spicejet.test.OWTest@23e84203]" started-at="2023-12-12T12:00:21 IST" name="launchBrowser" finished-at="2023-12-12T12:00:38 IST" duration-ms="16540" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="oneWayTrip()[pri:3, instance:com.spicejet.test.OWTest@23e84203]" started-at="2023-12-12T12:00:38 IST" name="oneWayTrip" finished-at="2023-12-12T12:01:41 IST" duration-ms="62965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneWayTrip -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.test.OWTest@23e84203]" started-at="2023-12-12T12:01:41 IST" name="closeBrowser" finished-at="2023-12-12T12:01:41 IST" duration-ms="369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.spicejet.test.SignUpTest_Positive -->
+      </class> <!-- com.spicejet.test.OWTest -->
     </test> <!-- Positive Test Cases -->
-    <test started-at="2023-12-08T12:52:14 IST" name="Negative Test cases" finished-at="2023-12-08T12:52:14 IST" duration-ms="1">
+    <test started-at="2023-12-12T12:01:41 IST" name="Negative Test cases" finished-at="2023-12-12T12:01:41 IST" duration-ms="8">
       <class name="com.spicejet.utils.Reports">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:com.spicejet.utils.Reports@cecf639]" started-at="2023-12-08T12:50:22 IST" name="startReport" finished-at="2023-12-08T12:50:22 IST" duration-ms="457" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:com.spicejet.utils.Reports@6c284af]" started-at="2023-12-12T11:59:36 IST" name="startReport" finished-at="2023-12-12T11:59:36 IST" duration-ms="649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.spicejet.utils.Reports@cecf639]" started-at="2023-12-08T12:52:14 IST" name="endReport" finished-at="2023-12-08T12:52:14 IST" duration-ms="603" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.spicejet.utils.Reports@6c284af]" started-at="2023-12-12T12:01:41 IST" name="endReport" finished-at="2023-12-12T12:01:42 IST" duration-ms="919" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
